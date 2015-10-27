@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChoiceSportTeamViewController">
+            <connections>
+                <outlet property="tableViewSports" destination="FiU-IB-mQe" id="xth-if-Shb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c17-3v-1Ev">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择球队" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzZ-x2-aYo">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="4oO-WU-Qcz"/>
+                                <constraint firstAttribute="width" constant="68" id="GRa-cw-QU3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="4oO-WU-Qcz"/>
+                                    <exclude reference="GRa-cw-QU3"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="4oO-WU-Qcz"/>
+                                    <include reference="GRa-cw-QU3"/>
+                                </mask>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="FzZ-x2-aYo" firstAttribute="top" secondItem="c17-3v-1Ev" secondAttribute="top" constant="25" id="DxZ-Jd-875"/>
+                        <constraint firstAttribute="height" constant="64" id="H0Z-93-SBw"/>
+                        <constraint firstAttribute="centerX" secondItem="FzZ-x2-aYo" secondAttribute="centerX" id="ggS-rE-ziV"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="FzZ-x2-aYo"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="H0Z-93-SBw"/>
+                            <exclude reference="DxZ-Jd-875"/>
+                            <exclude reference="ggS-rE-ziV"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="FzZ-x2-aYo"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="H0Z-93-SBw"/>
+                            <include reference="DxZ-Jd-875"/>
+                            <include reference="ggS-rE-ziV"/>
+                        </mask>
+                    </variation>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FiU-IB-mQe">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="O5r-ZC-eci"/>
+                        <outlet property="delegate" destination="-1" id="dpv-hM-JF1"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FiU-IB-mQe" secondAttribute="trailing" id="KLi-sB-Bf3"/>
+                <constraint firstItem="c17-3v-1Ev" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pky-MS-Azx"/>
+                <constraint firstItem="FiU-IB-mQe" firstAttribute="top" secondItem="c17-3v-1Ev" secondAttribute="bottom" id="ePu-ss-HDp"/>
+                <constraint firstAttribute="trailing" secondItem="c17-3v-1Ev" secondAttribute="trailing" id="ldW-fD-IyH"/>
+                <constraint firstItem="c17-3v-1Ev" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mnI-54-S1f"/>
+                <constraint firstAttribute="bottom" secondItem="FiU-IB-mQe" secondAttribute="bottom" id="osX-Ar-e74"/>
+                <constraint firstItem="FiU-IB-mQe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xWz-Vt-pkS"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="c17-3v-1Ev"/>
+                    <exclude reference="FiU-IB-mQe"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Pky-MS-Azx"/>
+                    <exclude reference="ldW-fD-IyH"/>
+                    <exclude reference="mnI-54-S1f"/>
+                    <exclude reference="KLi-sB-Bf3"/>
+                    <exclude reference="ePu-ss-HDp"/>
+                    <exclude reference="osX-Ar-e74"/>
+                    <exclude reference="xWz-Vt-pkS"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="c17-3v-1Ev"/>
+                    <include reference="FiU-IB-mQe"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Pky-MS-Azx"/>
+                    <include reference="ldW-fD-IyH"/>
+                    <include reference="mnI-54-S1f"/>
+                    <include reference="KLi-sB-Bf3"/>
+                    <include reference="ePu-ss-HDp"/>
+                    <include reference="osX-Ar-e74"/>
+                    <include reference="xWz-Vt-pkS"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

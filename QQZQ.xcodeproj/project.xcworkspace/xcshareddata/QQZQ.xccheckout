@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FC9A7CFD-5058-4798-8797-45D86762A114</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QQZQ</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DB738C1431DA3C62961E16E2848C14473CEB0F11</key>
+		<string>https://github.com/lixianli1987/QQZQ.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QQZQ.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DB738C1431DA3C62961E16E2848C14473CEB0F11</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lixianli1987/QQZQ.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DB738C1431DA3C62961E16E2848C14473CEB0F11</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DB738C1431DA3C62961E16E2848C14473CEB0F11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QQZQ</string>
+		</dict>
+	</array>
+</dict>
+</plist>
