@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTeamViewController">
@@ -107,16 +108,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9k-2L-Y5m" userLabel="View-bg">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lie-rj-8U6">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <state key="normal" title="球队管理">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="hr6-vV-XCF"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1Q-ht-oDI">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,6 +136,16 @@
                                 </mask>
                             </variation>
                         </view>
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lie-rj-8U6">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="球队管理">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="hr6-vV-XCF"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="lie-rj-8U6" secondAttribute="bottom" id="4Uu-Sj-Mtt"/>
@@ -162,9 +163,9 @@
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="lie-rj-8U6"/>
                             <exclude reference="g1Q-ht-oDI"/>
                             <exclude reference="xGz-no-jaS"/>
+                            <exclude reference="lie-rj-8U6"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="7aS-y9-SeO"/>
@@ -183,9 +184,9 @@
                     </variation>
                     <variation key="widthClass=compact">
                         <mask key="subviews">
-                            <include reference="lie-rj-8U6"/>
                             <include reference="g1Q-ht-oDI"/>
                             <include reference="xGz-no-jaS"/>
+                            <include reference="lie-rj-8U6"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="7aS-y9-SeO"/>

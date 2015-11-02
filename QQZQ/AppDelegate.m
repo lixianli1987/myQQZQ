@@ -25,6 +25,8 @@
 #import "CashConsumptionRecordDetailViewController.h"
 #import "MemberFeeManageViewController.h"
 #import "TeamMemberViewController.h"
+#import "TeamMemberDatumViewController.h"
+
 
 
 #define appKey @"9c3fe724515d"
@@ -45,16 +47,16 @@
     [SMS_SDK registerApp:appKey
               withSecret:appSecret];
     
-    UITabBarController *centerViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    //UITabBarController *centerViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     
     //测试单个页面
-    //UIViewController *test = [[TeamMemberViewController alloc] initWithNibName:@"TeamMemberViewController" bundle:nil];
+    UIViewController *test = [[TeamMemberDatumViewController alloc] initWithNibName:@"TeamMemberDatumViewController" bundle:nil];
     
     
     //登陆页面
     //LoginViewController *login = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:test];
     //隐藏navigationbar
     [navigationController setNavigationBarHidden:YES];
     

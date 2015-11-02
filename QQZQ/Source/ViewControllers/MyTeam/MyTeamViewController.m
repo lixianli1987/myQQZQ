@@ -941,7 +941,6 @@ int xx;
     //点击了查找球队
     if (tmpBtn.tag == 15) {
         NSLog(@"点击了查找球队");
-        NSLog(@"点击了发起活动");
         FindViewController *findViewController = [[FindViewController alloc] init];
         [self.navigationController pushViewController:findViewController animated:YES];
     }

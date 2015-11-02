@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C21BA7B1BE27022003693DB /* TeamMemberDatumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BA791BE27022003693DB /* TeamMemberDatumViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3C21BA7C1BE27022003693DB /* TeamMemberDatumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BA7A1BE27022003693DB /* TeamMemberDatumViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		3C296BC51B93408F004DE2FC /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C296BC41B93408F004DE2FC /* libicucore.dylib */; };
 		3C296BC71B93409F004DE2FC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C296BC61B93409F004DE2FC /* libz.dylib */; };
 		3C296BC91B9340AB004DE2FC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C296BC81B9340AB004DE2FC /* MessageUI.framework */; };
@@ -137,6 +139,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C21BA781BE27022003693DB /* TeamMemberDatumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMemberDatumViewController.h; sourceTree = "<group>"; };
+		3C21BA791BE27022003693DB /* TeamMemberDatumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMemberDatumViewController.m; sourceTree = "<group>"; };
+		3C21BA7A1BE27022003693DB /* TeamMemberDatumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamMemberDatumViewController.xib; sourceTree = "<group>"; };
 		3C296BC41B93408F004DE2FC /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		3C296BC61B93409F004DE2FC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3C296BC81B9340AB004DE2FC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -355,9 +360,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C21BA771BE26FEE003693DB /* TeamMemberDatum */ = {
+			isa = PBXGroup;
+			children = (
+				3C21BA781BE27022003693DB /* TeamMemberDatumViewController.h */,
+				3C21BA791BE27022003693DB /* TeamMemberDatumViewController.m */,
+				3C21BA7A1BE27022003693DB /* TeamMemberDatumViewController.xib */,
+			);
+			path = TeamMemberDatum;
+			sourceTree = "<group>";
+		};
 		3C2DB7731BD68F39000BE4AB /* TeamMember */ = {
 			isa = PBXGroup;
 			children = (
+				3C21BA771BE26FEE003693DB /* TeamMemberDatum */,
 				3C2DB7741BD68F92000BE4AB /* TeamMemberViewController.h */,
 				3C2DB7751BD68F92000BE4AB /* TeamMemberViewController.m */,
 				3C2DB7761BD68F92000BE4AB /* TeamMemberViewController.xib */,
@@ -907,6 +923,7 @@
 				3CC990B01BC4DA500036DD60 /* CashConsumptionRecordViewController.xib in Resources */,
 				3C4DCF1D1BA1B37E003AAEB5 /* CreateViewController.xib in Resources */,
 				3CA4C0311B8CB4C200EACF7D /* MeViewController.xib in Resources */,
+				3C21BA7C1BE27022003693DB /* TeamMemberDatumViewController.xib in Resources */,
 				3C4E11601BC0F85800253F00 /* SportDatumViewController.xib in Resources */,
 				3CA4C0071B8CB2AA00EACF7D /* LaunchScreen.xib in Resources */,
 				3CB9B6811B9A115100479821 /* ProvinceLocationViewController.xib in Resources */,
@@ -934,6 +951,7 @@
 				3C4E115F1BC0F85800253F00 /* SportDatumViewController.m in Sources */,
 				3C4E11781BC270F600253F00 /* SportNewsViewController.m in Sources */,
 				3CA4C0581B8E0BB900EACF7D /* AFHTTPRequestOperation.m in Sources */,
+				3C21BA7B1BE27022003693DB /* TeamMemberDatumViewController.m in Sources */,
 				3C92CDCF1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.m in Sources */,
 				3CA4BFF91B8CB2AA00EACF7D /* AppDelegate.m in Sources */,
 				3C4DCF451BA1C7DD003AAEB5 /* UIWebView+AFNetworking.m in Sources */,
