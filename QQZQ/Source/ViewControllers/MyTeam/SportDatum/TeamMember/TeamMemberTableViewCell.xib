@@ -7,17 +7,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="KGk-i7-Jjw" customClass="TeamMemberTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="168" id="KGk-i7-Jjw" customClass="TeamMemberTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="333" height="131"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example1" translatesAutoresizingMaskIntoConstraints="NO" id="hef-Qk-mMk">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                             <rect key="frame" x="10" y="10" width="80" height="65"/>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015年03月10日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxC-n0-b8Y">
+                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                            <rect key="frame" x="155" y="58" width="97" height="21"/>
+                        </variation>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right2" translatesAutoresizingMaskIntoConstraints="NO" id="Ls9-pN-MqY">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                            <rect key="frame" x="369" y="29" width="14" height="26"/>
+                        </variation>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="bHX-Po-NK0">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                            <rect key="frame" x="322" y="28" width="27" height="27"/>
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="队员：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEc-hA-66X">
@@ -83,31 +104,13 @@
                             <rect key="frame" x="98" y="58" width="60" height="21"/>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015年03月10日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxC-n0-b8Y">
-                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                            <rect key="frame" x="155" y="58" width="97" height="21"/>
-                        </variation>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right2" translatesAutoresizingMaskIntoConstraints="NO" id="Ls9-pN-MqY">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                            <rect key="frame" x="369" y="29" width="14" height="26"/>
-                        </variation>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="bHX-Po-NK0">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                            <rect key="frame" x="322" y="28" width="27" height="27"/>
-                        </variation>
-                    </imageView>
                 </subviews>
                 <variation key="default">
                     <mask key="subviews">
                         <exclude reference="hef-Qk-mMk"/>
+                        <exclude reference="TxC-n0-b8Y"/>
+                        <exclude reference="Ls9-pN-MqY"/>
+                        <exclude reference="bHX-Po-NK0"/>
                         <exclude reference="aEc-hA-66X"/>
                         <exclude reference="D75-0p-HzM"/>
                         <exclude reference="Q0a-nT-f8m"/>
@@ -115,14 +118,14 @@
                         <exclude reference="8vI-1O-Dxs"/>
                         <exclude reference="hNN-IF-h35"/>
                         <exclude reference="zUL-oG-kQJ"/>
-                        <exclude reference="TxC-n0-b8Y"/>
-                        <exclude reference="Ls9-pN-MqY"/>
-                        <exclude reference="bHX-Po-NK0"/>
                     </mask>
                 </variation>
                 <variation key="heightClass=regular-widthClass=compact">
                     <mask key="subviews">
                         <include reference="hef-Qk-mMk"/>
+                        <include reference="TxC-n0-b8Y"/>
+                        <include reference="Ls9-pN-MqY"/>
+                        <include reference="bHX-Po-NK0"/>
                         <include reference="aEc-hA-66X"/>
                         <include reference="D75-0p-HzM"/>
                         <include reference="Q0a-nT-f8m"/>
@@ -130,9 +133,6 @@
                         <include reference="8vI-1O-Dxs"/>
                         <include reference="hNN-IF-h35"/>
                         <include reference="zUL-oG-kQJ"/>
-                        <include reference="TxC-n0-b8Y"/>
-                        <include reference="Ls9-pN-MqY"/>
-                        <include reference="bHX-Po-NK0"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -143,7 +143,7 @@
                 <outlet property="labelScores" destination="hNN-IF-h35" id="0hA-zn-CrG"/>
                 <outlet property="labelTime" destination="TxC-n0-b8Y" id="4fL-Nn-dvF"/>
             </connections>
-            <point key="canvasLocation" x="402" y="475"/>
+            <point key="canvasLocation" x="343" y="334.5"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -68,6 +68,9 @@
 		3C92CDCF1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92CDCD1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.m */; };
 		3C92CDD01BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C92CDCE1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.xib */; };
 		3C92CDD31BD283660080AB2F /* CashData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92CDD21BD283660080AB2F /* CashData.m */; };
+		3C9D3B451BEA3E920010A169 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D3B431BEA3E920010A169 /* TeamTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3C9D3B461BEA3E920010A169 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D3B441BEA3E920010A169 /* TeamTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3C9D3B491BEA3EDF0010A169 /* TeamData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D3B481BEA3EDF0010A169 /* TeamData.m */; settings = {ASSET_TAGS = (); }; };
 		3CA4BFF61B8CB2AA00EACF7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4BFF51B8CB2AA00EACF7D /* main.m */; };
 		3CA4BFF91B8CB2AA00EACF7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4BFF81B8CB2AA00EACF7D /* AppDelegate.m */; };
 		3CA4BFFC1B8CB2AA00EACF7D /* QQZQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4BFFA1B8CB2AA00EACF7D /* QQZQ.xcdatamodeld */; };
@@ -238,6 +241,11 @@
 		3C92CDCE1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CashRecordDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		3C92CDD11BD283660080AB2F /* CashData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashData.h; sourceTree = "<group>"; };
 		3C92CDD21BD283660080AB2F /* CashData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashData.m; sourceTree = "<group>"; };
+		3C9D3B421BEA3E920010A169 /* TeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTableViewCell.h; sourceTree = "<group>"; };
+		3C9D3B431BEA3E920010A169 /* TeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewCell.m; sourceTree = "<group>"; };
+		3C9D3B441BEA3E920010A169 /* TeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamTableViewCell.xib; sourceTree = "<group>"; };
+		3C9D3B471BEA3EDF0010A169 /* TeamData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamData.h; sourceTree = "<group>"; };
+		3C9D3B481BEA3EDF0010A169 /* TeamData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamData.m; sourceTree = "<group>"; };
 		3CA4BFF01B8CB2AA00EACF7D /* QQZQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA4BFF41B8CB2AA00EACF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA4BFF51B8CB2AA00EACF7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -366,6 +374,11 @@
 				3C21BA781BE27022003693DB /* TeamMemberDatumViewController.h */,
 				3C21BA791BE27022003693DB /* TeamMemberDatumViewController.m */,
 				3C21BA7A1BE27022003693DB /* TeamMemberDatumViewController.xib */,
+				3C9D3B421BEA3E920010A169 /* TeamTableViewCell.h */,
+				3C9D3B431BEA3E920010A169 /* TeamTableViewCell.m */,
+				3C9D3B441BEA3E920010A169 /* TeamTableViewCell.xib */,
+				3C9D3B471BEA3EDF0010A169 /* TeamData.h */,
+				3C9D3B481BEA3EDF0010A169 /* TeamData.m */,
 			);
 			path = TeamMemberDatum;
 			sourceTree = "<group>";
@@ -924,6 +937,7 @@
 				3C4DCF1D1BA1B37E003AAEB5 /* CreateViewController.xib in Resources */,
 				3CA4C0311B8CB4C200EACF7D /* MeViewController.xib in Resources */,
 				3C21BA7C1BE27022003693DB /* TeamMemberDatumViewController.xib in Resources */,
+				3C9D3B461BEA3E920010A169 /* TeamTableViewCell.xib in Resources */,
 				3C4E11601BC0F85800253F00 /* SportDatumViewController.xib in Resources */,
 				3CA4C0071B8CB2AA00EACF7D /* LaunchScreen.xib in Resources */,
 				3CB9B6811B9A115100479821 /* ProvinceLocationViewController.xib in Resources */,
@@ -981,6 +995,7 @@
 				3CA4C05F1B8E0BB900EACF7D /* AFURLResponseSerialization.m in Sources */,
 				3C296BF21B981BE8004DE2FC /* ChoiceCityViewController.m in Sources */,
 				3C4DCF441BA1C7DD003AAEB5 /* UIRefreshControl+AFNetworking.m in Sources */,
+				3C9D3B491BEA3EDF0010A169 /* TeamData.m in Sources */,
 				3C4DCF1C1BA1B37E003AAEB5 /* CreateViewController.m in Sources */,
 				3C4DCF421BA1C7DD003AAEB5 /* UIImageView+AFNetworking.m in Sources */,
 				3C71DB631BD35C0000217680 /* MemberFeeManageViewController.m in Sources */,
@@ -1012,6 +1027,7 @@
 				3C92CDC51BD1DD2A0080AB2F /* CashConsumption.m in Sources */,
 				3C92CDD31BD283660080AB2F /* CashData.m in Sources */,
 				3CB9B6991B9A7A8C00479821 /* MailListViewController.m in Sources */,
+				3C9D3B451BEA3E920010A169 /* TeamTableViewCell.m in Sources */,
 				3CA4BFF61B8CB2AA00EACF7D /* main.m in Sources */,
 				3C4DCF411BA1C7DD003AAEB5 /* UIButton+AFNetworking.m in Sources */,
 				3C7A3FBE1BD7E4D200778BFB /* MemberData.m in Sources */,
