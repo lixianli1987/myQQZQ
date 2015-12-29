@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountViewController">
+            <connections>
+                <outlet property="buttonBack" destination="r4S-Y1-v6o" id="2wn-Hz-7mW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewY" destination="we2-DM-OXj" id="eb3-ju-PZl"/>
+                <outlet property="viewYH" destination="cnq-U5-60O" id="tf4-WM-hdk"/>
+                <outlet property="viewZ" destination="bpx-zX-OKN" id="AzQ-dy-rvb"/>
+                <outlet property="viewZFB" destination="Byf-fq-j8Q" id="ejP-V9-g59"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加提现账户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lv-UW-87J">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="10" y="81" width="94" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(支持银行卡和支付宝提现)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipP-3J-jCx">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="104" y="81" width="183" height="21"/>
+                    </variation>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-Wr-Of5" userLabel="View-1">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="120" width="400" height="1"/>
+                    </variation>
+                </view>
+                <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byf-fq-j8Q" userLabel="View-支付宝账户">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝账户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-7p-8Jp">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="40" y="15" width="152" height="21"/>
+                            </variation>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="11y-dD-dnc">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="349" y="9" width="25" height="33"/>
+                            </variation>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="DVE-Y0-3Rf" userLabel="Image View1">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="10" y="15" width="20" height="20"/>
+                            </variation>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="Ts0-7p-8Jp"/>
+                            <exclude reference="11y-dD-dnc"/>
+                            <exclude reference="DVE-Y0-3Rf"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="121" width="400" height="50"/>
+                        <mask key="subviews">
+                            <include reference="Ts0-7p-8Jp"/>
+                            <include reference="11y-dD-dnc"/>
+                            <include reference="DVE-Y0-3Rf"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OB2-EG-BMD" userLabel="View-2">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="171" width="400" height="1"/>
+                    </variation>
+                </view>
+                <view tag="11" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-U5-60O" userLabel="View-银行卡账户">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银行卡账户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L7-Be-knS">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="40" y="15" width="152" height="21"/>
+                            </variation>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="md1-vg-6TC">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="349" y="9" width="25" height="33"/>
+                            </variation>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="C7W-qY-yLx" userLabel="Image View1">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="10" y="15" width="20" height="20"/>
+                            </variation>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="2L7-Be-knS"/>
+                            <exclude reference="md1-vg-6TC"/>
+                            <exclude reference="C7W-qY-yLx"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="172" width="400" height="50"/>
+                        <mask key="subviews">
+                            <include reference="2L7-Be-knS"/>
+                            <include reference="md1-vg-6TC"/>
+                            <include reference="C7W-qY-yLx"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1n-Rh-hLS" userLabel="View-3">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="222" width="400" height="1"/>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已绑定账户列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVq-HK-Ew0">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="10" y="250" width="113" height="21"/>
+                    </variation>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLl-3k-mTT" userLabel="View-4">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="280" width="400" height="1"/>
+                    </variation>
+                </view>
+                <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-zX-OKN" userLabel="View-支">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**********6547" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1D-kH-7ZG">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="40" y="15" width="164" height="21"/>
+                            </variation>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="NUC-hh-Hcg">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="349" y="9" width="25" height="33"/>
+                            </variation>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="96B-ka-ivw" userLabel="Image View1">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="10" y="15" width="20" height="20"/>
+                            </variation>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="默认提现账户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-dK-gxw">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="0.2177821687" blue="0.89146240750000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="231" y="15" width="110" height="21"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="F1D-kH-7ZG"/>
+                            <exclude reference="NUC-hh-Hcg"/>
+                            <exclude reference="96B-ka-ivw"/>
+                            <exclude reference="Rej-dK-gxw"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="281" width="400" height="50"/>
+                        <mask key="subviews">
+                            <include reference="F1D-kH-7ZG"/>
+                            <include reference="NUC-hh-Hcg"/>
+                            <include reference="96B-ka-ivw"/>
+                            <include reference="Rej-dK-gxw"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltd-TK-PLd" userLabel="View-5">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="332" width="400" height="1"/>
+                    </variation>
+                </view>
+                <view tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="we2-DM-OXj" userLabel="View-银">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="iXZ-o0-sTp">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="349" y="9" width="25" height="33"/>
+                            </variation>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="5ga-Bu-SbP" userLabel="Image View1">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="10" y="15" width="20" height="20"/>
+                            </variation>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**********4566" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORS-mX-H05">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="40" y="15" width="164" height="21"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="iXZ-o0-sTp"/>
+                            <exclude reference="5ga-Bu-SbP"/>
+                            <exclude reference="ORS-mX-H05"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="333" width="400" height="50"/>
+                        <mask key="subviews">
+                            <include reference="iXZ-o0-sTp"/>
+                            <include reference="5ga-Bu-SbP"/>
+                            <include reference="ORS-mX-H05"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOb-kX-cIO" userLabel="View-6">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="384" width="400" height="1"/>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILd-lg-tUq" userLabel="View-bg">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置提现账户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oww-b2-FgL">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="149" y="25" width="102" height="21"/>
+                            </variation>
+                        </label>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-Y1-v6o">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <state key="normal" image="back">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="17" y="20" width="38" height="31"/>
+                            </variation>
+                            <connections>
+                                <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="QUn-GO-K29"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="oww-b2-FgL"/>
+                            <exclude reference="r4S-Y1-v6o"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="64"/>
+                        <mask key="subviews">
+                            <include reference="oww-b2-FgL"/>
+                            <include reference="r4S-Y1-v6o"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="0lv-UW-87J"/>
+                    <exclude reference="ipP-3J-jCx"/>
+                    <exclude reference="nDI-Wr-Of5"/>
+                    <exclude reference="Byf-fq-j8Q"/>
+                    <exclude reference="OB2-EG-BMD"/>
+                    <exclude reference="cnq-U5-60O"/>
+                    <exclude reference="C1n-Rh-hLS"/>
+                    <exclude reference="vVq-HK-Ew0"/>
+                    <exclude reference="NLl-3k-mTT"/>
+                    <exclude reference="bpx-zX-OKN"/>
+                    <exclude reference="ltd-TK-PLd"/>
+                    <exclude reference="we2-DM-OXj"/>
+                    <exclude reference="IOb-kX-cIO"/>
+                    <exclude reference="ILd-lg-tUq"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="0lv-UW-87J"/>
+                    <include reference="ipP-3J-jCx"/>
+                    <include reference="nDI-Wr-Of5"/>
+                    <include reference="Byf-fq-j8Q"/>
+                    <include reference="OB2-EG-BMD"/>
+                    <include reference="cnq-U5-60O"/>
+                    <include reference="C1n-Rh-hLS"/>
+                    <include reference="vVq-HK-Ew0"/>
+                    <include reference="NLl-3k-mTT"/>
+                    <include reference="bpx-zX-OKN"/>
+                    <include reference="ltd-TK-PLd"/>
+                    <include reference="we2-DM-OXj"/>
+                    <include reference="IOb-kX-cIO"/>
+                    <include reference="ILd-lg-tUq"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="12" height="20"/>
+        <image name="choice" width="18" height="18"/>
+        <image name="right" width="25" height="33"/>
+    </resources>
+</document>
