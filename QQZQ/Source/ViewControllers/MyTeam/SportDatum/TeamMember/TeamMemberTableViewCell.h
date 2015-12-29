@@ -19,7 +19,7 @@
 @property (weak,nonatomic) IBOutlet UILabel *labelAttendanceTimes;
 //积分
 @property (weak,nonatomic) IBOutlet UILabel *labelScores;
-//积分
+//成立时间
 @property (weak,nonatomic) IBOutlet UILabel *labelTime;
 
 -(void) initCellData:(MemberData *)bean;

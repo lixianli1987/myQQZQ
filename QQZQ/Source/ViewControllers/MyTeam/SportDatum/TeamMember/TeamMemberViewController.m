@@ -9,6 +9,7 @@
 #import "TeamMemberViewController.h"
 #import "MemberData.h"
 #import "TeamMemberTableViewCell.h"
+#import "TeamMemberDatumViewController.h"
 
 @interface TeamMemberViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -86,6 +87,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"选中第%d行",indexPath.row);
+    
+    TeamMemberDatumViewController *teamMemberDatumViewController = [[TeamMemberDatumViewController alloc] init];
+    [self.navigationController pushViewController:teamMemberDatumViewController animated:YES];
     
     //    //如果是直辖市，则直接返回注册页面
     //    RegisterViewController *registerViewController = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count - 3];
