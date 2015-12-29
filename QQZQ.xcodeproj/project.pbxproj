@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C21BA7B1BE27022003693DB /* TeamMemberDatumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BA791BE27022003693DB /* TeamMemberDatumViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3C21BA7C1BE27022003693DB /* TeamMemberDatumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BA7A1BE27022003693DB /* TeamMemberDatumViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3C21BA7B1BE27022003693DB /* TeamMemberDatumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BA791BE27022003693DB /* TeamMemberDatumViewController.m */; };
+		3C21BA7C1BE27022003693DB /* TeamMemberDatumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BA7A1BE27022003693DB /* TeamMemberDatumViewController.xib */; };
 		3C296BC51B93408F004DE2FC /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C296BC41B93408F004DE2FC /* libicucore.dylib */; };
 		3C296BC71B93409F004DE2FC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C296BC61B93409F004DE2FC /* libz.dylib */; };
 		3C296BC91B9340AB004DE2FC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C296BC81B9340AB004DE2FC /* MessageUI.framework */; };
@@ -24,6 +24,31 @@
 		3C296BF81B981D79004DE2FC /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C296BF61B981D79004DE2FC /* CityTableViewCell.xib */; };
 		3C2DB7771BD68F92000BE4AB /* TeamMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DB7751BD68F92000BE4AB /* TeamMemberViewController.m */; };
 		3C2DB7781BD68F92000BE4AB /* TeamMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DB7761BD68F92000BE4AB /* TeamMemberViewController.xib */; };
+		3C30C5AD1C204BC500C9FA29 /* RechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5AB1C204BC500C9FA29 /* RechargeViewController.m */; };
+		3C30C5AE1C204BC500C9FA29 /* RechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5AC1C204BC500C9FA29 /* RechargeViewController.xib */; };
+		3C30C5B21C204CC900C9FA29 /* RechargeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5B01C204CC900C9FA29 /* RechargeTableViewCell.m */; };
+		3C30C5B31C204CC900C9FA29 /* RechargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5B11C204CC900C9FA29 /* RechargeTableViewCell.xib */; };
+		3C30C5B61C204FFC00C9FA29 /* RechargeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5B51C204FFC00C9FA29 /* RechargeData.m */; };
+		3C30C5BA1C2054E400C9FA29 /* ChargeMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5B81C2054E400C9FA29 /* ChargeMoneyViewController.m */; };
+		3C30C5BB1C2054E400C9FA29 /* ChargeMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5B91C2054E400C9FA29 /* ChargeMoneyViewController.xib */; };
+		3C30C5BF1C21A09900C9FA29 /* GetCashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5BD1C21A09900C9FA29 /* GetCashViewController.m */; };
+		3C30C5C01C21A09900C9FA29 /* GetCashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5BE1C21A09900C9FA29 /* GetCashViewController.xib */; };
+		3C30C5C41C22FFF500C9FA29 /* RuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5C21C22FFF500C9FA29 /* RuleViewController.m */; };
+		3C30C5C51C22FFF500C9FA29 /* RuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5C31C22FFF500C9FA29 /* RuleViewController.xib */; };
+		3C30C5CF1C24498900C9FA29 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5CD1C24498900C9FA29 /* AccountViewController.m */; };
+		3C30C5D01C24498900C9FA29 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5CE1C24498900C9FA29 /* AccountViewController.xib */; };
+		3C30C5D41C2449E600C9FA29 /* SetZFBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5D21C2449E600C9FA29 /* SetZFBViewController.m */; };
+		3C30C5D51C2449E600C9FA29 /* SetZFBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5D31C2449E600C9FA29 /* SetZFBViewController.xib */; };
+		3C30C5D91C244A0500C9FA29 /* SetYHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5D71C244A0500C9FA29 /* SetYHViewController.m */; };
+		3C30C5DA1C244A0500C9FA29 /* SetYHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5D81C244A0500C9FA29 /* SetYHViewController.xib */; };
+		3C30C5DE1C24595B00C9FA29 /* AccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5DC1C24595B00C9FA29 /* AccountListViewController.m */; };
+		3C30C5DF1C24595B00C9FA29 /* AccountListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5DD1C24595B00C9FA29 /* AccountListViewController.xib */; };
+		3C30C5E31C245D7E00C9FA29 /* MyHistoryActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5E11C245D7E00C9FA29 /* MyHistoryActivityViewController.m */; };
+		3C30C5E41C245D7E00C9FA29 /* MyHistoryActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5E21C245D7E00C9FA29 /* MyHistoryActivityViewController.xib */; };
+		3C30C5E81C245F6000C9FA29 /* HistoryActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5E61C245F6000C9FA29 /* HistoryActivityTableViewCell.m */; };
+		3C30C5E91C245F6000C9FA29 /* HistoryActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5E71C245F6000C9FA29 /* HistoryActivityTableViewCell.xib */; };
+		3C30C5ED1C24658B00C9FA29 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30C5EB1C24658B00C9FA29 /* SetViewController.m */; };
+		3C30C5EE1C24658B00C9FA29 /* SetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30C5EC1C24658B00C9FA29 /* SetViewController.xib */; };
 		3C4DCF161BA1B320003AAEB5 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DCF141BA1B320003AAEB5 /* FindViewController.m */; };
 		3C4DCF171BA1B320003AAEB5 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4DCF151BA1B320003AAEB5 /* FindViewController.xib */; };
 		3C4DCF1C1BA1B37E003AAEB5 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DCF1A1BA1B37E003AAEB5 /* CreateViewController.m */; };
@@ -59,6 +84,9 @@
 		3C71DB681BD3687900217680 /* MemberFeeManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71DB661BD3687900217680 /* MemberFeeManageTableViewCell.m */; };
 		3C71DB691BD3687900217680 /* MemberFeeManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C71DB671BD3687900217680 /* MemberFeeManageTableViewCell.xib */; };
 		3C71DB6C1BD368AA00217680 /* MemberFeeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71DB6B1BD368AA00217680 /* MemberFeeData.m */; };
+		3C75950D1BEBAF0F00805F51 /* AttendanceManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75950B1BEBAF0F00805F51 /* AttendanceManageTableViewCell.m */; };
+		3C75950E1BEBAF0F00805F51 /* AttendanceManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C75950C1BEBAF0F00805F51 /* AttendanceManageTableViewCell.xib */; };
+		3C7595111BEBB2A600805F51 /* AttendenceManageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7595101BEBB2A600805F51 /* AttendenceManageData.m */; };
 		3C7A3FBA1BD7DF0100778BFB /* TeamMemberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A3FB81BD7DF0100778BFB /* TeamMemberTableViewCell.m */; };
 		3C7A3FBB1BD7DF0100778BFB /* TeamMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7A3FB91BD7DF0100778BFB /* TeamMemberTableViewCell.xib */; };
 		3C7A3FBE1BD7E4D200778BFB /* MemberData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A3FBD1BD7E4D200778BFB /* MemberData.m */; };
@@ -68,9 +96,9 @@
 		3C92CDCF1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92CDCD1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.m */; };
 		3C92CDD01BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C92CDCE1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.xib */; };
 		3C92CDD31BD283660080AB2F /* CashData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92CDD21BD283660080AB2F /* CashData.m */; };
-		3C9D3B451BEA3E920010A169 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D3B431BEA3E920010A169 /* TeamTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		3C9D3B461BEA3E920010A169 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D3B441BEA3E920010A169 /* TeamTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3C9D3B491BEA3EDF0010A169 /* TeamData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D3B481BEA3EDF0010A169 /* TeamData.m */; settings = {ASSET_TAGS = (); }; };
+		3C9D3B451BEA3E920010A169 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D3B431BEA3E920010A169 /* TeamTableViewCell.m */; };
+		3C9D3B461BEA3E920010A169 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D3B441BEA3E920010A169 /* TeamTableViewCell.xib */; };
+		3C9D3B491BEA3EDF0010A169 /* TeamData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D3B481BEA3EDF0010A169 /* TeamData.m */; };
 		3CA4BFF61B8CB2AA00EACF7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4BFF51B8CB2AA00EACF7D /* main.m */; };
 		3CA4BFF91B8CB2AA00EACF7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4BFF81B8CB2AA00EACF7D /* AppDelegate.m */; };
 		3CA4BFFC1B8CB2AA00EACF7D /* QQZQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4BFFA1B8CB2AA00EACF7D /* QQZQ.xcdatamodeld */; };
@@ -105,6 +133,19 @@
 		3CA4C0841B8E13C100EACF7D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA4C0821B8E13C100EACF7D /* RegisterViewController.xib */; };
 		3CA4C08A1B91947500EACF7D /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CA4C0861B91947500EACF7D /* SMS_SDKLocalizable.strings */; };
 		3CA4C08B1B91947500EACF7D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4C0881B91947500EACF7D /* SMS_SDK.framework */; };
+		3CAE08B21BECEDA8007199B5 /* AttendenceRateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE08B01BECEDA8007199B5 /* AttendenceRateTableViewCell.m */; };
+		3CAE08B31BECEDA8007199B5 /* AttendenceRateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAE08B11BECEDA8007199B5 /* AttendenceRateTableViewCell.xib */; };
+		3CAE08B61BECEE70007199B5 /* AttendenceStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE08B51BECEE70007199B5 /* AttendenceStatistics.m */; };
+		3CB75F701BED91F400044556 /* AttendenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB75F6E1BED91F400044556 /* AttendenceDetailViewController.m */; };
+		3CB75F711BED91F400044556 /* AttendenceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB75F6F1BED91F400044556 /* AttendenceDetailViewController.xib */; };
+		3CB75F751BED96F000044556 /* AttendenceDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB75F731BED96F000044556 /* AttendenceDetailTableViewCell.m */; };
+		3CB75F761BED96F000044556 /* AttendenceDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB75F741BED96F000044556 /* AttendenceDetailTableViewCell.xib */; };
+		3CB75F791BEEE57900044556 /* AttendenceMemberData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB75F781BEEE57900044556 /* AttendenceMemberData.m */; };
+		3CB75F7E1BEF0F5100044556 /* ModifySportDatumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB75F7C1BEF0F5100044556 /* ModifySportDatumViewController.m */; };
+		3CB75F7F1BEF0F5100044556 /* ModifySportDatumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB75F7D1BEF0F5100044556 /* ModifySportDatumViewController.xib */; };
+		3CB75F861BEF920C00044556 /* imageCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB75F821BEF920C00044556 /* imageCropView.m */; };
+		3CB75F871BEF920C00044556 /* ImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB75F841BEF920C00044556 /* ImageCropViewController.m */; };
+		3CB75F881BEF920C00044556 /* ImageCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB75F851BEF920C00044556 /* ImageCropViewController.xib */; };
 		3CB9B6801B9A115100479821 /* ProvinceLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9B67E1B9A115100479821 /* ProvinceLocationViewController.m */; };
 		3CB9B6811B9A115100479821 /* ProvinceLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB9B67F1B9A115100479821 /* ProvinceLocationViewController.xib */; };
 		3CB9B6851B9A11AE00479821 /* ProvinceLocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9B6831B9A11AE00479821 /* ProvinceLocationTableViewCell.m */; };
@@ -123,12 +164,22 @@
 		3CC990B01BC4DA500036DD60 /* CashConsumptionRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC990AE1BC4DA500036DD60 /* CashConsumptionRecordViewController.xib */; };
 		3CC990B41BC4E2C60036DD60 /* CashConsumptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC990B21BC4E2C60036DD60 /* CashConsumptionTableViewCell.m */; };
 		3CC990B51BC4E2C60036DD60 /* CashConsumptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC990B31BC4E2C60036DD60 /* CashConsumptionTableViewCell.xib */; };
-		3CFD5CD61BDA856F007DD79C /* TeamActivityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD5CD41BDA856F007DD79C /* TeamActivityListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3CFD5CD71BDA856F007DD79C /* TeamActivityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD5CD51BDA856F007DD79C /* TeamActivityListViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		3CFD5CDB1BDA8808007DD79C /* TeamActivityListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD5CD91BDA8808007DD79C /* TeamActivityListTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		3CFD5CDC1BDA8808007DD79C /* TeamActivityListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD5CDA1BDA8808007DD79C /* TeamActivityListTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3CFD5CE11BDB1863007DD79C /* TeamAttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD5CDF1BDB1863007DD79C /* TeamAttendanceViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3CFD5CE21BDB1863007DD79C /* TeamAttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD5CE01BDB1863007DD79C /* TeamAttendanceViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3CDE41771C0F2116002E8BB8 /* MyTeamInnerSportData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE41761C0F2116002E8BB8 /* MyTeamInnerSportData.m */; };
+		3CDE41881C15CB7B002E8BB8 /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE41861C15CB7B002E8BB8 /* PersonalDataViewController.m */; };
+		3CDE41891C15CB7B002E8BB8 /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDE41871C15CB7B002E8BB8 /* PersonalDataViewController.xib */; };
+		3CDE418D1C15D48D002E8BB8 /* PersonalCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE418B1C15D48D002E8BB8 /* PersonalCardViewController.m */; };
+		3CDE418E1C15D48D002E8BB8 /* PersonalCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDE418C1C15D48D002E8BB8 /* PersonalCardViewController.xib */; };
+		3CDE41B41C187877002E8BB8 /* MyQuanQuanWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE41B21C187877002E8BB8 /* MyQuanQuanWalletViewController.m */; };
+		3CDE41B51C187877002E8BB8 /* MyQuanQuanWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CDE41B31C187877002E8BB8 /* MyQuanQuanWalletViewController.xib */; };
+		3CE8518B1BF24D2300D3DF69 /* MyTeamData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8518A1BF24D2300D3DF69 /* MyTeamData.m */; };
+		3CE8518E1BF73D1000D3DF69 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8518D1BF73D1000D3DF69 /* UserData.m */; };
+		3CE851911BF750D800D3DF69 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE851901BF750D800D3DF69 /* Common.m */; };
+		3CFD5CD61BDA856F007DD79C /* TeamActivityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD5CD41BDA856F007DD79C /* TeamActivityListViewController.m */; };
+		3CFD5CD71BDA856F007DD79C /* TeamActivityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD5CD51BDA856F007DD79C /* TeamActivityListViewController.xib */; };
+		3CFD5CDB1BDA8808007DD79C /* TeamActivityListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD5CD91BDA8808007DD79C /* TeamActivityListTableViewCell.m */; };
+		3CFD5CDC1BDA8808007DD79C /* TeamActivityListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD5CDA1BDA8808007DD79C /* TeamActivityListTableViewCell.xib */; };
+		3CFD5CE11BDB1863007DD79C /* TeamAttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD5CDF1BDB1863007DD79C /* TeamAttendanceViewController.m */; };
+		3CFD5CE21BDB1863007DD79C /* TeamAttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD5CE01BDB1863007DD79C /* TeamAttendanceViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +216,44 @@
 		3C2DB7741BD68F92000BE4AB /* TeamMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMemberViewController.h; sourceTree = "<group>"; };
 		3C2DB7751BD68F92000BE4AB /* TeamMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMemberViewController.m; sourceTree = "<group>"; };
 		3C2DB7761BD68F92000BE4AB /* TeamMemberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamMemberViewController.xib; sourceTree = "<group>"; };
+		3C30C5AA1C204BC500C9FA29 /* RechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeViewController.h; sourceTree = "<group>"; };
+		3C30C5AB1C204BC500C9FA29 /* RechargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeViewController.m; sourceTree = "<group>"; };
+		3C30C5AC1C204BC500C9FA29 /* RechargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RechargeViewController.xib; sourceTree = "<group>"; };
+		3C30C5AF1C204CC900C9FA29 /* RechargeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeTableViewCell.h; sourceTree = "<group>"; };
+		3C30C5B01C204CC900C9FA29 /* RechargeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeTableViewCell.m; sourceTree = "<group>"; };
+		3C30C5B11C204CC900C9FA29 /* RechargeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RechargeTableViewCell.xib; sourceTree = "<group>"; };
+		3C30C5B41C204FFC00C9FA29 /* RechargeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeData.h; sourceTree = "<group>"; };
+		3C30C5B51C204FFC00C9FA29 /* RechargeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeData.m; sourceTree = "<group>"; };
+		3C30C5B71C2054E400C9FA29 /* ChargeMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeMoneyViewController.h; sourceTree = "<group>"; };
+		3C30C5B81C2054E400C9FA29 /* ChargeMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeMoneyViewController.m; sourceTree = "<group>"; };
+		3C30C5B91C2054E400C9FA29 /* ChargeMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChargeMoneyViewController.xib; sourceTree = "<group>"; };
+		3C30C5BC1C21A09900C9FA29 /* GetCashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCashViewController.h; sourceTree = "<group>"; };
+		3C30C5BD1C21A09900C9FA29 /* GetCashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCashViewController.m; sourceTree = "<group>"; };
+		3C30C5BE1C21A09900C9FA29 /* GetCashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetCashViewController.xib; sourceTree = "<group>"; };
+		3C30C5C11C22FFF500C9FA29 /* RuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleViewController.h; sourceTree = "<group>"; };
+		3C30C5C21C22FFF500C9FA29 /* RuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleViewController.m; sourceTree = "<group>"; };
+		3C30C5C31C22FFF500C9FA29 /* RuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RuleViewController.xib; sourceTree = "<group>"; };
+		3C30C5CC1C24498900C9FA29 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		3C30C5CD1C24498900C9FA29 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		3C30C5CE1C24498900C9FA29 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		3C30C5D11C2449E600C9FA29 /* SetZFBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetZFBViewController.h; sourceTree = "<group>"; };
+		3C30C5D21C2449E600C9FA29 /* SetZFBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetZFBViewController.m; sourceTree = "<group>"; };
+		3C30C5D31C2449E600C9FA29 /* SetZFBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetZFBViewController.xib; sourceTree = "<group>"; };
+		3C30C5D61C244A0500C9FA29 /* SetYHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetYHViewController.h; sourceTree = "<group>"; };
+		3C30C5D71C244A0500C9FA29 /* SetYHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetYHViewController.m; sourceTree = "<group>"; };
+		3C30C5D81C244A0500C9FA29 /* SetYHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetYHViewController.xib; sourceTree = "<group>"; };
+		3C30C5DB1C24595B00C9FA29 /* AccountListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountListViewController.h; sourceTree = "<group>"; };
+		3C30C5DC1C24595B00C9FA29 /* AccountListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountListViewController.m; sourceTree = "<group>"; };
+		3C30C5DD1C24595B00C9FA29 /* AccountListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountListViewController.xib; sourceTree = "<group>"; };
+		3C30C5E01C245D7E00C9FA29 /* MyHistoryActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHistoryActivityViewController.h; sourceTree = "<group>"; };
+		3C30C5E11C245D7E00C9FA29 /* MyHistoryActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHistoryActivityViewController.m; sourceTree = "<group>"; };
+		3C30C5E21C245D7E00C9FA29 /* MyHistoryActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHistoryActivityViewController.xib; sourceTree = "<group>"; };
+		3C30C5E51C245F6000C9FA29 /* HistoryActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryActivityTableViewCell.h; sourceTree = "<group>"; };
+		3C30C5E61C245F6000C9FA29 /* HistoryActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryActivityTableViewCell.m; sourceTree = "<group>"; };
+		3C30C5E71C245F6000C9FA29 /* HistoryActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryActivityTableViewCell.xib; sourceTree = "<group>"; };
+		3C30C5EA1C24658B00C9FA29 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		3C30C5EB1C24658B00C9FA29 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		3C30C5EC1C24658B00C9FA29 /* SetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetViewController.xib; sourceTree = "<group>"; };
 		3C4DCF131BA1B320003AAEB5 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3C4DCF141BA1B320003AAEB5 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3C4DCF151BA1B320003AAEB5 /* FindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -226,6 +315,11 @@
 		3C71DB671BD3687900217680 /* MemberFeeManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberFeeManageTableViewCell.xib; sourceTree = "<group>"; };
 		3C71DB6A1BD368AA00217680 /* MemberFeeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberFeeData.h; sourceTree = "<group>"; };
 		3C71DB6B1BD368AA00217680 /* MemberFeeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberFeeData.m; sourceTree = "<group>"; };
+		3C75950A1BEBAF0F00805F51 /* AttendanceManageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceManageTableViewCell.h; sourceTree = "<group>"; };
+		3C75950B1BEBAF0F00805F51 /* AttendanceManageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceManageTableViewCell.m; sourceTree = "<group>"; };
+		3C75950C1BEBAF0F00805F51 /* AttendanceManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceManageTableViewCell.xib; sourceTree = "<group>"; };
+		3C75950F1BEBB2A600805F51 /* AttendenceManageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendenceManageData.h; sourceTree = "<group>"; };
+		3C7595101BEBB2A600805F51 /* AttendenceManageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendenceManageData.m; sourceTree = "<group>"; };
 		3C7A3FB71BD7DF0100778BFB /* TeamMemberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMemberTableViewCell.h; sourceTree = "<group>"; };
 		3C7A3FB81BD7DF0100778BFB /* TeamMemberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMemberTableViewCell.m; sourceTree = "<group>"; };
 		3C7A3FB91BD7DF0100778BFB /* TeamMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamMemberTableViewCell.xib; sourceTree = "<group>"; };
@@ -306,6 +400,27 @@
 		3CA4C0871B91947500EACF7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		3CA4C0881B91947500EACF7D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		3CA4C0891B91947500EACF7D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		3CAE08AF1BECEDA8007199B5 /* AttendenceRateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendenceRateTableViewCell.h; sourceTree = "<group>"; };
+		3CAE08B01BECEDA8007199B5 /* AttendenceRateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendenceRateTableViewCell.m; sourceTree = "<group>"; };
+		3CAE08B11BECEDA8007199B5 /* AttendenceRateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendenceRateTableViewCell.xib; sourceTree = "<group>"; };
+		3CAE08B41BECEE70007199B5 /* AttendenceStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendenceStatistics.h; sourceTree = "<group>"; };
+		3CAE08B51BECEE70007199B5 /* AttendenceStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendenceStatistics.m; sourceTree = "<group>"; };
+		3CB75F6D1BED91F400044556 /* AttendenceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendenceDetailViewController.h; sourceTree = "<group>"; };
+		3CB75F6E1BED91F400044556 /* AttendenceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendenceDetailViewController.m; sourceTree = "<group>"; };
+		3CB75F6F1BED91F400044556 /* AttendenceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendenceDetailViewController.xib; sourceTree = "<group>"; };
+		3CB75F721BED96F000044556 /* AttendenceDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendenceDetailTableViewCell.h; sourceTree = "<group>"; };
+		3CB75F731BED96F000044556 /* AttendenceDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendenceDetailTableViewCell.m; sourceTree = "<group>"; };
+		3CB75F741BED96F000044556 /* AttendenceDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendenceDetailTableViewCell.xib; sourceTree = "<group>"; };
+		3CB75F771BEEE57900044556 /* AttendenceMemberData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendenceMemberData.h; sourceTree = "<group>"; };
+		3CB75F781BEEE57900044556 /* AttendenceMemberData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendenceMemberData.m; sourceTree = "<group>"; };
+		3CB75F7B1BEF0F5100044556 /* ModifySportDatumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifySportDatumViewController.h; sourceTree = "<group>"; };
+		3CB75F7C1BEF0F5100044556 /* ModifySportDatumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifySportDatumViewController.m; sourceTree = "<group>"; };
+		3CB75F7D1BEF0F5100044556 /* ModifySportDatumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifySportDatumViewController.xib; sourceTree = "<group>"; };
+		3CB75F811BEF920C00044556 /* imageCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageCropView.h; sourceTree = "<group>"; };
+		3CB75F821BEF920C00044556 /* imageCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageCropView.m; sourceTree = "<group>"; };
+		3CB75F831BEF920C00044556 /* ImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCropViewController.h; sourceTree = "<group>"; };
+		3CB75F841BEF920C00044556 /* ImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCropViewController.m; sourceTree = "<group>"; };
+		3CB75F851BEF920C00044556 /* ImageCropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCropViewController.xib; sourceTree = "<group>"; };
 		3CB9B67D1B9A115100479821 /* ProvinceLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceLocationViewController.h; sourceTree = "<group>"; };
 		3CB9B67E1B9A115100479821 /* ProvinceLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceLocationViewController.m; sourceTree = "<group>"; };
 		3CB9B67F1B9A115100479821 /* ProvinceLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProvinceLocationViewController.xib; sourceTree = "<group>"; };
@@ -333,6 +448,23 @@
 		3CC990B11BC4E2C60036DD60 /* CashConsumptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashConsumptionTableViewCell.h; sourceTree = "<group>"; };
 		3CC990B21BC4E2C60036DD60 /* CashConsumptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashConsumptionTableViewCell.m; sourceTree = "<group>"; };
 		3CC990B31BC4E2C60036DD60 /* CashConsumptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CashConsumptionTableViewCell.xib; sourceTree = "<group>"; };
+		3CDE41751C0F2116002E8BB8 /* MyTeamInnerSportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamInnerSportData.h; sourceTree = "<group>"; };
+		3CDE41761C0F2116002E8BB8 /* MyTeamInnerSportData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamInnerSportData.m; sourceTree = "<group>"; };
+		3CDE41851C15CB7B002E8BB8 /* PersonalDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDataViewController.h; sourceTree = "<group>"; };
+		3CDE41861C15CB7B002E8BB8 /* PersonalDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDataViewController.m; sourceTree = "<group>"; };
+		3CDE41871C15CB7B002E8BB8 /* PersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDataViewController.xib; sourceTree = "<group>"; };
+		3CDE418A1C15D48D002E8BB8 /* PersonalCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCardViewController.h; sourceTree = "<group>"; };
+		3CDE418B1C15D48D002E8BB8 /* PersonalCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCardViewController.m; sourceTree = "<group>"; };
+		3CDE418C1C15D48D002E8BB8 /* PersonalCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCardViewController.xib; sourceTree = "<group>"; };
+		3CDE41B11C187877002E8BB8 /* MyQuanQuanWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuanQuanWalletViewController.h; sourceTree = "<group>"; };
+		3CDE41B21C187877002E8BB8 /* MyQuanQuanWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuanQuanWalletViewController.m; sourceTree = "<group>"; };
+		3CDE41B31C187877002E8BB8 /* MyQuanQuanWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuanQuanWalletViewController.xib; sourceTree = "<group>"; };
+		3CE851891BF24D2300D3DF69 /* MyTeamData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamData.h; sourceTree = "<group>"; };
+		3CE8518A1BF24D2300D3DF69 /* MyTeamData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamData.m; sourceTree = "<group>"; };
+		3CE8518C1BF73D1000D3DF69 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		3CE8518D1BF73D1000D3DF69 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		3CE8518F1BF750D800D3DF69 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		3CE851901BF750D800D3DF69 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		3CFD5CD31BDA856F007DD79C /* TeamActivityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamActivityListViewController.h; sourceTree = "<group>"; };
 		3CFD5CD41BDA856F007DD79C /* TeamActivityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamActivityListViewController.m; sourceTree = "<group>"; };
 		3CFD5CD51BDA856F007DD79C /* TeamActivityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamActivityListViewController.xib; sourceTree = "<group>"; };
@@ -399,6 +531,25 @@
 			path = TeamMember;
 			sourceTree = "<group>";
 		};
+		3C30C5CB1C24491E00C9FA29 /* SetGetAccount */ = {
+			isa = PBXGroup;
+			children = (
+				3C30C5CC1C24498900C9FA29 /* AccountViewController.h */,
+				3C30C5CD1C24498900C9FA29 /* AccountViewController.m */,
+				3C30C5CE1C24498900C9FA29 /* AccountViewController.xib */,
+				3C30C5D11C2449E600C9FA29 /* SetZFBViewController.h */,
+				3C30C5D21C2449E600C9FA29 /* SetZFBViewController.m */,
+				3C30C5D31C2449E600C9FA29 /* SetZFBViewController.xib */,
+				3C30C5D61C244A0500C9FA29 /* SetYHViewController.h */,
+				3C30C5D71C244A0500C9FA29 /* SetYHViewController.m */,
+				3C30C5D81C244A0500C9FA29 /* SetYHViewController.xib */,
+				3C30C5DB1C24595B00C9FA29 /* AccountListViewController.h */,
+				3C30C5DC1C24595B00C9FA29 /* AccountListViewController.m */,
+				3C30C5DD1C24595B00C9FA29 /* AccountListViewController.xib */,
+			);
+			path = SetGetAccount;
+			sourceTree = "<group>";
+		};
 		3C4DCF121BA1B320003AAEB5 /* FindSport */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +568,7 @@
 		3C4DCF181BA1B37E003AAEB5 /* CreatSport */ = {
 			isa = PBXGroup;
 			children = (
+				3CB75F801BEF920C00044556 /* ImageCrop */,
 				3C4DCF191BA1B37E003AAEB5 /* CreateViewController.h */,
 				3C4DCF1A1BA1B37E003AAEB5 /* CreateViewController.m */,
 				3C4DCF1B1BA1B37E003AAEB5 /* CreateViewController.xib */,
@@ -464,6 +616,7 @@
 		3C4E115B1BC0F7A700253F00 /* SportDatum */ = {
 			isa = PBXGroup;
 			children = (
+				3CB75F7A1BEF0F3100044556 /* ModifySportDatum */,
 				3CFD5CDD1BDB1808007DD79C /* TeamAttendance */,
 				3CFD5CD21BDA8548007DD79C /* TeamActivityList */,
 				3C2DB7731BD68F39000BE4AB /* TeamMember */,
@@ -605,6 +758,10 @@
 				3CA4C0621B8E0C0700EACF7D /* WebServiceHost.m */,
 				3CA4C03C1B8CB7E400EACF7D /* MyUtils.h */,
 				3CA4C03D1B8CB7E400EACF7D /* MyUtils.m */,
+				3CE8518C1BF73D1000D3DF69 /* UserData.h */,
+				3CE8518D1BF73D1000D3DF69 /* UserData.m */,
+				3CE8518F1BF750D800D3DF69 /* Common.h */,
+				3CE851901BF750D800D3DF69 /* Common.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -704,6 +861,7 @@
 		3CA4C0261B8CB45700EACF7D /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				3CDE41781C0F4B62002E8BB8 /* MyInfo */,
 				3CA4C02D1B8CB4C200EACF7D /* MeViewController.h */,
 				3CA4C02E1B8CB4C200EACF7D /* MeViewController.m */,
 				3CA4C02F1B8CB4C200EACF7D /* MeViewController.xib */,
@@ -733,6 +891,10 @@
 				3C4E117D1BC293E600253F00 /* SportInnerAcyivityTableViewCell.m */,
 				3C4E117F1BC2941000253F00 /* SportInnerData.h */,
 				3C4E11801BC2941000253F00 /* SportInnerData.m */,
+				3CE851891BF24D2300D3DF69 /* MyTeamData.h */,
+				3CE8518A1BF24D2300D3DF69 /* MyTeamData.m */,
+				3CDE41751C0F2116002E8BB8 /* MyTeamInnerSportData.h */,
+				3CDE41761C0F2116002E8BB8 /* MyTeamInnerSportData.m */,
 			);
 			path = MyTeam;
 			sourceTree = "<group>";
@@ -772,6 +934,43 @@
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
+		3CB75F6C1BED919800044556 /* AttendenceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3CB75F6D1BED91F400044556 /* AttendenceDetailViewController.h */,
+				3CB75F6E1BED91F400044556 /* AttendenceDetailViewController.m */,
+				3CB75F6F1BED91F400044556 /* AttendenceDetailViewController.xib */,
+				3CB75F721BED96F000044556 /* AttendenceDetailTableViewCell.h */,
+				3CB75F731BED96F000044556 /* AttendenceDetailTableViewCell.m */,
+				3CB75F741BED96F000044556 /* AttendenceDetailTableViewCell.xib */,
+				3CB75F771BEEE57900044556 /* AttendenceMemberData.h */,
+				3CB75F781BEEE57900044556 /* AttendenceMemberData.m */,
+			);
+			path = AttendenceDetail;
+			sourceTree = "<group>";
+		};
+		3CB75F7A1BEF0F3100044556 /* ModifySportDatum */ = {
+			isa = PBXGroup;
+			children = (
+				3CB75F7B1BEF0F5100044556 /* ModifySportDatumViewController.h */,
+				3CB75F7C1BEF0F5100044556 /* ModifySportDatumViewController.m */,
+				3CB75F7D1BEF0F5100044556 /* ModifySportDatumViewController.xib */,
+			);
+			path = ModifySportDatum;
+			sourceTree = "<group>";
+		};
+		3CB75F801BEF920C00044556 /* ImageCrop */ = {
+			isa = PBXGroup;
+			children = (
+				3CB75F811BEF920C00044556 /* imageCropView.h */,
+				3CB75F821BEF920C00044556 /* imageCropView.m */,
+				3CB75F831BEF920C00044556 /* ImageCropViewController.h */,
+				3CB75F841BEF920C00044556 /* ImageCropViewController.m */,
+				3CB75F851BEF920C00044556 /* ImageCropViewController.xib */,
+			);
+			path = ImageCrop;
+			sourceTree = "<group>";
+		};
 		3CC990A51BC4D1E90036DD60 /* TeamConstitution */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +997,105 @@
 			path = CashConsumptionRecord;
 			sourceTree = "<group>";
 		};
+		3CDE41781C0F4B62002E8BB8 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3CDE41A01C15DE08002E8BB8 /* HistoryActivity */,
+				3CDE41A11C15DE08002E8BB8 /* InviteFriend */,
+				3CDE41A21C15DE08002E8BB8 /* Message */,
+				3CDE41AA1C15DE08002E8BB8 /* Photos */,
+				3CDE41AB1C15DE08002E8BB8 /* Set */,
+				3CDE41AC1C15DE08002E8BB8 /* Wallet */,
+				3CDE41841C15CB7B002E8BB8 /* PersonalData */,
+			);
+			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		3CDE41841C15CB7B002E8BB8 /* PersonalData */ = {
+			isa = PBXGroup;
+			children = (
+				3CDE418A1C15D48D002E8BB8 /* PersonalCardViewController.h */,
+				3CDE418B1C15D48D002E8BB8 /* PersonalCardViewController.m */,
+				3CDE418C1C15D48D002E8BB8 /* PersonalCardViewController.xib */,
+				3CDE41851C15CB7B002E8BB8 /* PersonalDataViewController.h */,
+				3CDE41861C15CB7B002E8BB8 /* PersonalDataViewController.m */,
+				3CDE41871C15CB7B002E8BB8 /* PersonalDataViewController.xib */,
+			);
+			path = PersonalData;
+			sourceTree = "<group>";
+		};
+		3CDE41A01C15DE08002E8BB8 /* HistoryActivity */ = {
+			isa = PBXGroup;
+			children = (
+				3C30C5E01C245D7E00C9FA29 /* MyHistoryActivityViewController.h */,
+				3C30C5E11C245D7E00C9FA29 /* MyHistoryActivityViewController.m */,
+				3C30C5E21C245D7E00C9FA29 /* MyHistoryActivityViewController.xib */,
+				3C30C5E51C245F6000C9FA29 /* HistoryActivityTableViewCell.h */,
+				3C30C5E61C245F6000C9FA29 /* HistoryActivityTableViewCell.m */,
+				3C30C5E71C245F6000C9FA29 /* HistoryActivityTableViewCell.xib */,
+			);
+			path = HistoryActivity;
+			sourceTree = "<group>";
+		};
+		3CDE41A11C15DE08002E8BB8 /* InviteFriend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InviteFriend;
+			sourceTree = "<group>";
+		};
+		3CDE41A21C15DE08002E8BB8 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		3CDE41AA1C15DE08002E8BB8 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		3CDE41AB1C15DE08002E8BB8 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				3C30C5EA1C24658B00C9FA29 /* SetViewController.h */,
+				3C30C5EB1C24658B00C9FA29 /* SetViewController.m */,
+				3C30C5EC1C24658B00C9FA29 /* SetViewController.xib */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		3CDE41AC1C15DE08002E8BB8 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				3C30C5CB1C24491E00C9FA29 /* SetGetAccount */,
+				3CDE41B11C187877002E8BB8 /* MyQuanQuanWalletViewController.h */,
+				3CDE41B21C187877002E8BB8 /* MyQuanQuanWalletViewController.m */,
+				3CDE41B31C187877002E8BB8 /* MyQuanQuanWalletViewController.xib */,
+				3C30C5AA1C204BC500C9FA29 /* RechargeViewController.h */,
+				3C30C5AB1C204BC500C9FA29 /* RechargeViewController.m */,
+				3C30C5AC1C204BC500C9FA29 /* RechargeViewController.xib */,
+				3C30C5AF1C204CC900C9FA29 /* RechargeTableViewCell.h */,
+				3C30C5B01C204CC900C9FA29 /* RechargeTableViewCell.m */,
+				3C30C5B11C204CC900C9FA29 /* RechargeTableViewCell.xib */,
+				3C30C5B41C204FFC00C9FA29 /* RechargeData.h */,
+				3C30C5B51C204FFC00C9FA29 /* RechargeData.m */,
+				3C30C5B71C2054E400C9FA29 /* ChargeMoneyViewController.h */,
+				3C30C5B81C2054E400C9FA29 /* ChargeMoneyViewController.m */,
+				3C30C5B91C2054E400C9FA29 /* ChargeMoneyViewController.xib */,
+				3C30C5BC1C21A09900C9FA29 /* GetCashViewController.h */,
+				3C30C5BD1C21A09900C9FA29 /* GetCashViewController.m */,
+				3C30C5BE1C21A09900C9FA29 /* GetCashViewController.xib */,
+				3C30C5C11C22FFF500C9FA29 /* RuleViewController.h */,
+				3C30C5C21C22FFF500C9FA29 /* RuleViewController.m */,
+				3C30C5C31C22FFF500C9FA29 /* RuleViewController.xib */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
 		3CFD5CD21BDA8548007DD79C /* TeamActivityList */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,9 +1112,20 @@
 		3CFD5CDD1BDB1808007DD79C /* TeamAttendance */ = {
 			isa = PBXGroup;
 			children = (
+				3CB75F6C1BED919800044556 /* AttendenceDetail */,
 				3CFD5CDE1BDB1863007DD79C /* TeamAttendanceViewController.h */,
 				3CFD5CDF1BDB1863007DD79C /* TeamAttendanceViewController.m */,
 				3CFD5CE01BDB1863007DD79C /* TeamAttendanceViewController.xib */,
+				3C75950A1BEBAF0F00805F51 /* AttendanceManageTableViewCell.h */,
+				3C75950B1BEBAF0F00805F51 /* AttendanceManageTableViewCell.m */,
+				3C75950C1BEBAF0F00805F51 /* AttendanceManageTableViewCell.xib */,
+				3C75950F1BEBB2A600805F51 /* AttendenceManageData.h */,
+				3C7595101BEBB2A600805F51 /* AttendenceManageData.m */,
+				3CAE08AF1BECEDA8007199B5 /* AttendenceRateTableViewCell.h */,
+				3CAE08B01BECEDA8007199B5 /* AttendenceRateTableViewCell.m */,
+				3CAE08B11BECEDA8007199B5 /* AttendenceRateTableViewCell.xib */,
+				3CAE08B41BECEE70007199B5 /* AttendenceStatistics.h */,
+				3CAE08B51BECEE70007199B5 /* AttendenceStatistics.m */,
 			);
 			path = TeamAttendance;
 			sourceTree = "<group>";
@@ -905,9 +1214,11 @@
 			files = (
 				3C296BEE1B981B4D004DE2FC /* ChoiceProvinceTableViewCell.xib in Resources */,
 				3CA4C0431B8DFC8100EACF7D /* LoginViewController.xib in Resources */,
+				3CB75F881BEF920C00044556 /* ImageCropViewController.xib in Resources */,
 				3CFD5CD71BDA856F007DD79C /* TeamActivityListViewController.xib in Resources */,
 				3C296BF31B981BE8004DE2FC /* ChoiceCityViewController.xib in Resources */,
 				3C7A3FBB1BD7DF0100778BFB /* TeamMemberTableViewCell.xib in Resources */,
+				3C30C5C51C22FFF500C9FA29 /* RuleViewController.xib in Resources */,
 				3C4DCF171BA1B320003AAEB5 /* FindViewController.xib in Resources */,
 				3CA4C0021B8CB2AA00EACF7D /* Main.storyboard in Resources */,
 				3C296BF81B981D79004DE2FC /* CityTableViewCell.xib in Resources */,
@@ -918,30 +1229,49 @@
 				3C4DCF281BA1BAD1003AAEB5 /* FindViewTableViewCell.xib in Resources */,
 				3C4E11861BC396E700253F00 /* SportInnerActivityDetailViewController.xib in Resources */,
 				3C4E114A1BBE9AFD00253F00 /* ChoiceSportTeamViewController.xib in Resources */,
+				3C30C5D01C24498900C9FA29 /* AccountViewController.xib in Resources */,
+				3C30C5DF1C24595B00C9FA29 /* AccountListViewController.xib in Resources */,
 				3CB9B6901B9A128E00479821 /* LookForFootballCourtViewController.xib in Resources */,
+				3C30C5E41C245D7E00C9FA29 /* MyHistoryActivityViewController.xib in Resources */,
 				3C92CDCB1BD1F0DD0080AB2F /* CashConsumptionRecordDetailViewController.xib in Resources */,
+				3C30C5E91C245F6000C9FA29 /* HistoryActivityTableViewCell.xib in Resources */,
+				3CB75F711BED91F400044556 /* AttendenceDetailViewController.xib in Resources */,
 				3C4E11791BC270F600253F00 /* SportNewsViewController.xib in Resources */,
+				3CAE08B31BECEDA8007199B5 /* AttendenceRateTableViewCell.xib in Resources */,
+				3C30C5EE1C24658B00C9FA29 /* SetViewController.xib in Resources */,
 				3CA4C02C1B8CB49700EACF7D /* MyTeamViewController.xib in Resources */,
+				3CDE41891C15CB7B002E8BB8 /* PersonalDataViewController.xib in Resources */,
 				3CC990AA1BC4D2050036DD60 /* TeamConstitutionViewController.xib in Resources */,
 				3CFD5CE21BDB1863007DD79C /* TeamAttendanceViewController.xib in Resources */,
 				3CB9B69A1B9A7A8C00479821 /* MailListViewController.xib in Resources */,
+				3CDE41B51C187877002E8BB8 /* MyQuanQuanWalletViewController.xib in Resources */,
 				3CA4C0361B8CB4DF00EACF7D /* ChatViewController.xib in Resources */,
 				3C2DB7781BD68F92000BE4AB /* TeamMemberViewController.xib in Resources */,
 				3CA4C0841B8E13C100EACF7D /* RegisterViewController.xib in Resources */,
 				3CC990B51BC4E2C60036DD60 /* CashConsumptionTableViewCell.xib in Resources */,
 				3CB9B6951B9A12F300479821 /* SportRankListViewController.xib in Resources */,
+				3C75950E1BEBAF0F00805F51 /* AttendanceManageTableViewCell.xib in Resources */,
 				3C92CDD01BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.xib in Resources */,
 				3CB9B6861B9A11AE00479821 /* ProvinceLocationTableViewCell.xib in Resources */,
+				3CDE418E1C15D48D002E8BB8 /* PersonalCardViewController.xib in Resources */,
+				3C30C5B31C204CC900C9FA29 /* RechargeTableViewCell.xib in Resources */,
 				3C4DCF231BA1B3D3003AAEB5 /* InitiateViewController.xib in Resources */,
 				3CC990B01BC4DA500036DD60 /* CashConsumptionRecordViewController.xib in Resources */,
 				3C4DCF1D1BA1B37E003AAEB5 /* CreateViewController.xib in Resources */,
+				3C30C5AE1C204BC500C9FA29 /* RechargeViewController.xib in Resources */,
 				3CA4C0311B8CB4C200EACF7D /* MeViewController.xib in Resources */,
 				3C21BA7C1BE27022003693DB /* TeamMemberDatumViewController.xib in Resources */,
 				3C9D3B461BEA3E920010A169 /* TeamTableViewCell.xib in Resources */,
 				3C4E11601BC0F85800253F00 /* SportDatumViewController.xib in Resources */,
+				3C30C5DA1C244A0500C9FA29 /* SetYHViewController.xib in Resources */,
 				3CA4C0071B8CB2AA00EACF7D /* LaunchScreen.xib in Resources */,
 				3CB9B6811B9A115100479821 /* ProvinceLocationViewController.xib in Resources */,
+				3CB75F761BED96F000044556 /* AttendenceDetailTableViewCell.xib in Resources */,
+				3CB75F7F1BEF0F5100044556 /* ModifySportDatumViewController.xib in Resources */,
+				3C30C5BB1C2054E400C9FA29 /* ChargeMoneyViewController.xib in Resources */,
+				3C30C5C01C21A09900C9FA29 /* GetCashViewController.xib in Resources */,
 				3CA4C0041B8CB2AA00EACF7D /* Images.xcassets in Resources */,
+				3C30C5D51C2449E600C9FA29 /* SetZFBViewController.xib in Resources */,
 				3C71DB641BD35C0000217680 /* MemberFeeManageViewController.xib in Resources */,
 				3C296BE91B9816A6004DE2FC /* ChoiceProvinceViewController.xib in Resources */,
 				3C71DB691BD3687900217680 /* MemberFeeManageTableViewCell.xib in Resources */,
@@ -964,9 +1294,16 @@
 			files = (
 				3C4E115F1BC0F85800253F00 /* SportDatumViewController.m in Sources */,
 				3C4E11781BC270F600253F00 /* SportNewsViewController.m in Sources */,
+				3C30C5CF1C24498900C9FA29 /* AccountViewController.m in Sources */,
+				3CB75F751BED96F000044556 /* AttendenceDetailTableViewCell.m in Sources */,
+				3C30C5BF1C21A09900C9FA29 /* GetCashViewController.m in Sources */,
+				3C30C5E81C245F6000C9FA29 /* HistoryActivityTableViewCell.m in Sources */,
 				3CA4C0581B8E0BB900EACF7D /* AFHTTPRequestOperation.m in Sources */,
+				3CE851911BF750D800D3DF69 /* Common.m in Sources */,
+				3C30C5C41C22FFF500C9FA29 /* RuleViewController.m in Sources */,
 				3C21BA7B1BE27022003693DB /* TeamMemberDatumViewController.m in Sources */,
 				3C92CDCF1BD27D9E0080AB2F /* CashRecordDetailCollectionViewCell.m in Sources */,
+				3CB75F7E1BEF0F5100044556 /* ModifySportDatumViewController.m in Sources */,
 				3CA4BFF91B8CB2AA00EACF7D /* AppDelegate.m in Sources */,
 				3C4DCF451BA1C7DD003AAEB5 /* UIWebView+AFNetworking.m in Sources */,
 				3CA4C02B1B8CB49700EACF7D /* MyTeamViewController.m in Sources */,
@@ -974,19 +1311,27 @@
 				3CA4C03A1B8CB4F800EACF7D /* HomePageViewController.m in Sources */,
 				3C4DCF3E1BA1C7DD003AAEB5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3CB9B68A1B9A121100479821 /* PublicActivityViewController.m in Sources */,
+				3CB75F861BEF920C00044556 /* imageCropView.m in Sources */,
 				3CB9B6941B9A12F300479821 /* SportRankListViewController.m in Sources */,
 				3CFD5CD61BDA856F007DD79C /* TeamActivityListViewController.m in Sources */,
 				3C71DB6C1BD368AA00217680 /* MemberFeeData.m in Sources */,
+				3CAE08B61BECEE70007199B5 /* AttendenceStatistics.m in Sources */,
+				3CDE41B41C187877002E8BB8 /* MyQuanQuanWalletViewController.m in Sources */,
 				3C296BED1B981B4D004DE2FC /* ChoiceProvinceTableViewCell.m in Sources */,
 				3CA4C03E1B8CB7E400EACF7D /* MyUtils.m in Sources */,
+				3C30C5BA1C2054E400C9FA29 /* ChargeMoneyViewController.m in Sources */,
 				3C4E11811BC2941000253F00 /* SportInnerData.m in Sources */,
+				3CB75F871BEF920C00044556 /* ImageCropViewController.m in Sources */,
+				3CAE08B21BECEDA8007199B5 /* AttendenceRateTableViewCell.m in Sources */,
 				3CA4C0601B8E0BB900EACF7D /* AFURLSessionManager.m in Sources */,
 				3CA4C05A1B8E0BB900EACF7D /* AFHTTPSessionManager.m in Sources */,
 				3CFD5CDB1BDA8808007DD79C /* TeamActivityListTableViewCell.m in Sources */,
+				3CDE418D1C15D48D002E8BB8 /* PersonalCardViewController.m in Sources */,
 				3CA4C0301B8CB4C200EACF7D /* MeViewController.m in Sources */,
 				3C4DCF3F1BA1C7DD003AAEB5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3CA4C05B1B8E0BB900EACF7D /* AFNetworkReachabilityManager.m in Sources */,
 				3C4E11731BC2468300253F00 /* MyTeamTableViewCell.m in Sources */,
+				3C30C5B21C204CC900C9FA29 /* RechargeTableViewCell.m in Sources */,
 				3CB9B68F1B9A128E00479821 /* LookForFootballCourtViewController.m in Sources */,
 				3CC990B41BC4E2C60036DD60 /* CashConsumptionTableViewCell.m in Sources */,
 				3CFD5CE11BDB1863007DD79C /* TeamAttendanceViewController.m in Sources */,
@@ -996,12 +1341,15 @@
 				3C296BF21B981BE8004DE2FC /* ChoiceCityViewController.m in Sources */,
 				3C4DCF441BA1C7DD003AAEB5 /* UIRefreshControl+AFNetworking.m in Sources */,
 				3C9D3B491BEA3EDF0010A169 /* TeamData.m in Sources */,
+				3C30C5ED1C24658B00C9FA29 /* SetViewController.m in Sources */,
 				3C4DCF1C1BA1B37E003AAEB5 /* CreateViewController.m in Sources */,
+				3C30C5D91C244A0500C9FA29 /* SetYHViewController.m in Sources */,
 				3C4DCF421BA1C7DD003AAEB5 /* UIImageView+AFNetworking.m in Sources */,
 				3C71DB631BD35C0000217680 /* MemberFeeManageViewController.m in Sources */,
 				3CB9B6801B9A115100479821 /* ProvinceLocationViewController.m in Sources */,
 				3CA4C0831B8E13C100EACF7D /* RegisterViewController.m in Sources */,
 				3C2DB7771BD68F92000BE4AB /* TeamMemberViewController.m in Sources */,
+				3CDE41881C15CB7B002E8BB8 /* PersonalDataViewController.m in Sources */,
 				3CA4C05E1B8E0BB900EACF7D /* AFURLRequestSerialization.m in Sources */,
 				3C4DCF431BA1C7DD003AAEB5 /* UIProgressView+AFNetworking.m in Sources */,
 				3C4E11701BC2447600253F00 /* SportDataCell.m in Sources */,
@@ -1018,23 +1366,35 @@
 				3CA4BFFF1B8CB2AA00EACF7D /* ViewController.m in Sources */,
 				3CA4C0221B8CB38700EACF7D /* MainViewController.m in Sources */,
 				3C4DCF221BA1B3D3003AAEB5 /* InitiateViewController.m in Sources */,
+				3C30C5E31C245D7E00C9FA29 /* MyHistoryActivityViewController.m in Sources */,
 				3CA4C05C1B8E0BB900EACF7D /* AFSecurityPolicy.m in Sources */,
+				3C30C5AD1C204BC500C9FA29 /* RechargeViewController.m in Sources */,
 				3C4DCF161BA1B320003AAEB5 /* FindViewController.m in Sources */,
 				3C4DCF271BA1BAD1003AAEB5 /* FindViewTableViewCell.m in Sources */,
 				3C4E117E1BC293E600253F00 /* SportInnerAcyivityTableViewCell.m in Sources */,
 				3CA4C0351B8CB4DF00EACF7D /* ChatViewController.m in Sources */,
 				3CA4C0421B8DFC8100EACF7D /* LoginViewController.m in Sources */,
+				3C30C5D41C2449E600C9FA29 /* SetZFBViewController.m in Sources */,
 				3C92CDC51BD1DD2A0080AB2F /* CashConsumption.m in Sources */,
 				3C92CDD31BD283660080AB2F /* CashData.m in Sources */,
 				3CB9B6991B9A7A8C00479821 /* MailListViewController.m in Sources */,
 				3C9D3B451BEA3E920010A169 /* TeamTableViewCell.m in Sources */,
+				3CB75F701BED91F400044556 /* AttendenceDetailViewController.m in Sources */,
+				3CE8518E1BF73D1000D3DF69 /* UserData.m in Sources */,
 				3CA4BFF61B8CB2AA00EACF7D /* main.m in Sources */,
 				3C4DCF411BA1C7DD003AAEB5 /* UIButton+AFNetworking.m in Sources */,
 				3C7A3FBE1BD7E4D200778BFB /* MemberData.m in Sources */,
+				3C75950D1BEBAF0F00805F51 /* AttendanceManageTableViewCell.m in Sources */,
 				3C4DCF2B1BA1C31D003AAEB5 /* FindViewData.m in Sources */,
 				3C296BF71B981D79004DE2FC /* CityTableViewCell.m in Sources */,
 				3C4E11851BC396E700253F00 /* SportInnerActivityDetailViewController.m in Sources */,
 				3CA4C0631B8E0C0700EACF7D /* WebServiceHost.m in Sources */,
+				3CDE41771C0F2116002E8BB8 /* MyTeamInnerSportData.m in Sources */,
+				3CB75F791BEEE57900044556 /* AttendenceMemberData.m in Sources */,
+				3CE8518B1BF24D2300D3DF69 /* MyTeamData.m in Sources */,
+				3C7595111BEBB2A600805F51 /* AttendenceManageData.m in Sources */,
+				3C30C5DE1C24595B00C9FA29 /* AccountListViewController.m in Sources */,
+				3C30C5B61C204FFC00C9FA29 /* RechargeData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
