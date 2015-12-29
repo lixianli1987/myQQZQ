@@ -26,7 +26,13 @@
 #import "MemberFeeManageViewController.h"
 #import "TeamMemberViewController.h"
 #import "TeamMemberDatumViewController.h"
-
+#import "TeamAttendanceViewController.h"
+#import "AttendenceDetailViewController.h"
+#import "RechargeViewController.h"
+#import "ChargeMoneyViewController.h"
+#import "AccountViewController.h"
+#import "SetZFBViewController.h"
+#import "SetYHViewController.h"
 
 
 #define appKey @"9c3fe724515d"
@@ -50,13 +56,13 @@
     //UITabBarController *centerViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     
     //测试单个页面
-    UIViewController *test = [[TeamMemberDatumViewController alloc] initWithNibName:@"TeamMemberDatumViewController" bundle:nil];
+    //UIViewController *test = [[SetYHViewController alloc] initWithNibName:@"SetYHViewController" bundle:nil];
     
     
     //登陆页面
-    //LoginViewController *login = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    LoginViewController *login = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:test];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:login];
     //隐藏navigationbar
     [navigationController setNavigationBarHidden:YES];
     
