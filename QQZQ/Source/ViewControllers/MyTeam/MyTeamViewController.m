@@ -22,6 +22,9 @@
 #import "SportInnerData.h"
 #import "SportInnerAcyivityTableViewCell.h"
 #import "SportInnerActivityDetailViewController.h"
+#import "MyTeamData.h"
+#import "UserData.h"
+#import "MyTeamInnerSportData.h"
 
 
 
@@ -70,6 +73,10 @@
     int flagDown;
     int flagLeft;
     
+    //球队管理数组
+    NSMutableArray *arrayAllData;
+    //球队内部活动
+    NSMutableArray *arrayInnerData;
     
 }
 
@@ -127,21 +134,27 @@
     
     
     /*************************请求数据************************************/
-    //根据请求到的数据，决定显示哪些view
+    //球队管理数据
+    [self getMyTeamData];
+    //球队内部活动数据
+    [self getInnerActivityData];
     
+    
+    /***************************以下为调试部分，正常时应该写在initData方法请求数据成功后显示************************/
     
     /*********************球队管理************************/
     //无值调用
     //[self sportManage];
     //有值调用
-    [self sportManageValue];
+    //[self sportManageValue];
     /*****************************球队内部活动*****************************/
     //无值调用
     //[self sportInnerActivity];
     //有值调用
-    [self sportInnerActivityValue];
+    //[self sportInnerActivityValue];
     
 }
+
 
 //改写手势代理
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
@@ -296,28 +309,17 @@
 //初始化进入我的页面，有球队时
 -(void) sportManageValue
 {
+    //初始化cell数据
     cellInitDtatArray = [[NSMutableArray alloc] init];
-    SportData *sportData1 = [[SportData alloc] init];
-    sportData1.imageUrl = @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1307/22/c8/23614693_1374477999097_800x600.jpg";
-    sportData1.downName = @"测试1";
     
-    SportData *sportData2 = [[SportData alloc] init];
-    sportData2.imageUrl = @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1307/22/c8/23614693_1374477999097_800x600.jpg";
-    sportData2.downName = @"测试2";
+    //sportData1.imageUrl = @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1307/22/c8/23614693_1374477999097_800x600.jpg";
     
-    SportData *sportData3 = [[SportData alloc] init];
-    sportData3.imageUrl = @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1307/22/c8/23614693_1374477999097_800x600.jpg";
-    sportData3.downName = @"测试3";
-    
-    SportData *sportData4 = [[SportData alloc] init];
-    sportData4.imageUrl = @"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1307/22/c8/23614693_1374477999097_800x600.jpg";
-    sportData4.downName = @"测试4";
-    
-    
-    [cellInitDtatArray addObject:sportData1];
-    [cellInitDtatArray addObject:sportData2];
-    [cellInitDtatArray addObject:sportData3];
-    [cellInitDtatArray addObject:sportData4];
+    for (int i = 0; i < arrayAllData.count; i++) {
+        SportData *sportData = [[SportData alloc] init];
+        sportData.imageUrl = ((MyTeamData *)([arrayAllData objectAtIndex:i])).teamlogo;
+        sportData.downName = ((MyTeamData *)([arrayAllData objectAtIndex:i])).teamname;
+        [cellInitDtatArray addObject:sportData];
+    }
     
     //球队管理view
     UIView *viewSportManageValue = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-110)];
@@ -346,12 +348,12 @@
     [viewCell1 addSubview:viewCell1A];
     //图片
     UIImageView *imageViewCell1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [imageViewCell1 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+    //[imageViewCell1 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
     [viewCell1A addSubview:imageViewCell1];
     //文字
     UILabel *labelNameCell1 = [[UILabel alloc] initWithFrame:CGRectMake(4, 85, 73, 21)];
     labelNameCell1.backgroundColor = [UIColor clearColor];
-    labelNameCell1.text = @"活动还没开始";
+    //labelNameCell1.text = @"活动还没开始";
     labelNameCell1.textAlignment = NSTextAlignmentCenter;
     labelNameCell1.font = [UIFont systemFontOfSize:12];
     [viewCell1 addSubview:labelNameCell1];
@@ -375,11 +377,11 @@
     [viewCell2 addSubview:viewCell2A];
     //图片
     UIImageView *imageViewCell2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [imageViewCell2 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+    //[imageViewCell2 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
     [viewCell2A addSubview:imageViewCell2];
     //文字
     UILabel *labelNameCell2 = [[UILabel alloc] initWithFrame:CGRectMake(4, 85, 73, 21)];
-    labelNameCell2.text = @"活动还没开始";
+    //labelNameCell2.text = @"活动还没开始";
     labelNameCell2.textAlignment = NSTextAlignmentCenter;
     labelNameCell2.font = [UIFont systemFontOfSize:12];
     [viewCell2 addSubview:labelNameCell2];
@@ -403,11 +405,11 @@
     [viewCell3 addSubview:viewCell3A];
     //图片
     UIImageView *imageViewCell3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [imageViewCell3 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+    //[imageViewCell3 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
     [viewCell3A addSubview:imageViewCell3];
     //文字
     UILabel *labelNameCell3 = [[UILabel alloc] initWithFrame:CGRectMake(4, 85, 73, 21)];
-    labelNameCell3.text = @"活动还没开始";
+    //labelNameCell3.text = @"活动还没开始";
     labelNameCell3.textAlignment = NSTextAlignmentCenter;
     labelNameCell3.font = [UIFont systemFontOfSize:12];
     [viewCell3 addSubview:labelNameCell3];
@@ -431,12 +433,12 @@
     [viewCell4 addSubview:viewCell4A];
     //图片
     UIImageView *imageViewCell4 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [imageViewCell4 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+    //[imageViewCell4 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
     [viewCell4A addSubview:imageViewCell4];
     //文字
     UILabel *labelNameCell4 = [[UILabel alloc] initWithFrame:CGRectMake(4, 85, 73, 21)];
     labelNameCell4.backgroundColor = [UIColor clearColor];
-    labelNameCell4.text = @"活动还没开始";
+    //labelNameCell4.text = @"活动还没开始";
     labelNameCell4.textAlignment = NSTextAlignmentCenter;
     labelNameCell4.font = [UIFont systemFontOfSize:12];
     [viewCell4 addSubview:labelNameCell4];
@@ -460,12 +462,12 @@
     [viewCell5 addSubview:viewCell5A];
     //图片
     UIImageView *imageViewCell5 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [imageViewCell5 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+    //[imageViewCell5 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
     [viewCell5A addSubview:imageViewCell5];
     //文字
     UILabel *labelNameCell5 = [[UILabel alloc] initWithFrame:CGRectMake(4, 85, 73, 21)];
     labelNameCell5.backgroundColor = [UIColor clearColor];
-    labelNameCell5.text = @"活动还没开始";
+    //labelNameCell5.text = @"活动还没开始";
     labelNameCell5.textAlignment = NSTextAlignmentCenter;
     labelNameCell5.font = [UIFont systemFontOfSize:12];
     [viewCell5 addSubview:labelNameCell5];
@@ -489,12 +491,12 @@
     [viewCell6 addSubview:viewCell6A];
     //图片
     UIImageView *imageViewCell6 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
-    [imageViewCell6 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+    //[imageViewCell6 setImageWithURL:[NSURL URLWithString:sportData1.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
     [viewCell6A addSubview:imageViewCell6];
     //文字
     UILabel *labelNameCell6 = [[UILabel alloc] initWithFrame:CGRectMake(4, 85, 73, 21)];
     labelNameCell6.backgroundColor = [UIColor clearColor];
-    labelNameCell6.text = @"活动还没开始";
+    //labelNameCell6.text = @"活动还没开始";
     labelNameCell6.textAlignment = NSTextAlignmentCenter;
     labelNameCell6.font = [UIFont systemFontOfSize:12];
     [viewCell6 addSubview:labelNameCell6];
@@ -510,17 +512,35 @@
             case 1:
                 NSLog(@"显示1");
                 [viewCell1 setHidden:NO];
+                //这里显示值
+                [imageViewCell1 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:0])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell1.text = ((SportData *)([cellInitDtatArray objectAtIndex:0])).downName;
                 break;
             case 2:
                 NSLog(@"显示2");
                 [viewCell1 setHidden:NO];
                 [viewCell2 setHidden:NO];
+                //这里显示值
+                [imageViewCell1 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:0])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell1.text = ((SportData *)([cellInitDtatArray objectAtIndex:0])).downName;
+                //这里显示值
+                [imageViewCell2 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:1])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell2.text = ((SportData *)([cellInitDtatArray objectAtIndex:1])).downName;
                 break;
             case 3:
                 NSLog(@"显示3");
                 [viewCell1 setHidden:NO];
                 [viewCell2 setHidden:NO];
                 [viewCell3 setHidden:NO];
+                //这里显示值
+                [imageViewCell1 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:0])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell1.text = ((SportData *)([cellInitDtatArray objectAtIndex:0])).downName;
+                //这里显示值
+                [imageViewCell2 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:1])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell2.text = ((SportData *)([cellInitDtatArray objectAtIndex:1])).downName;
+                //这里显示值
+                [imageViewCell3 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:2])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell3.text = ((SportData *)([cellInitDtatArray objectAtIndex:2])).downName;
                 break;
                 
             default:
@@ -543,6 +563,18 @@
                 [viewCell2 setHidden:NO];
                 [viewCell3 setHidden:NO];
                 [viewCell4 setHidden:NO];
+                //这里显示值
+                [imageViewCell1 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:0])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell1.text = ((SportData *)([cellInitDtatArray objectAtIndex:0])).downName;
+                //这里显示值
+                [imageViewCell2 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:1])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell2.text = ((SportData *)([cellInitDtatArray objectAtIndex:1])).downName;
+                //这里显示值
+                [imageViewCell3 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:2])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell3.text = ((SportData *)([cellInitDtatArray objectAtIndex:2])).downName;
+                //这里显示值
+                [imageViewCell4 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:3])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell4.text = ((SportData *)([cellInitDtatArray objectAtIndex:3])).downName;
                 break;
             case 5:
                 NSLog(@"显示5");
@@ -551,6 +583,21 @@
                 [viewCell3 setHidden:NO];
                 [viewCell4 setHidden:NO];
                 [viewCell5 setHidden:NO];
+                //这里显示值
+                [imageViewCell1 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:0])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell1.text = ((SportData *)([cellInitDtatArray objectAtIndex:0])).downName;
+                //这里显示值
+                [imageViewCell2 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:1])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell2.text = ((SportData *)([cellInitDtatArray objectAtIndex:1])).downName;
+                //这里显示值
+                [imageViewCell3 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:2])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell3.text = ((SportData *)([cellInitDtatArray objectAtIndex:2])).downName;
+                //这里显示值
+                [imageViewCell4 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:3])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell4.text = ((SportData *)([cellInitDtatArray objectAtIndex:3])).downName;
+                //这里显示值
+                [imageViewCell5 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:4])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell5.text = ((SportData *)([cellInitDtatArray objectAtIndex:4])).downName;
                 break;
             case 6:
                 NSLog(@"显示6");
@@ -560,6 +607,24 @@
                 [viewCell4 setHidden:NO];
                 [viewCell5 setHidden:NO];
                 [viewCell6 setHidden:NO];
+                //这里显示值
+                [imageViewCell1 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:0])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell1.text = ((SportData *)([cellInitDtatArray objectAtIndex:0])).downName;
+                //这里显示值
+                [imageViewCell2 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:1])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell2.text = ((SportData *)([cellInitDtatArray objectAtIndex:1])).downName;
+                //这里显示值
+                [imageViewCell3 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:2])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell3.text = ((SportData *)([cellInitDtatArray objectAtIndex:2])).downName;
+                //这里显示值
+                [imageViewCell4 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:3])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell4.text = ((SportData *)([cellInitDtatArray objectAtIndex:3])).downName;
+                //这里显示值
+                [imageViewCell5 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:4])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell5.text = ((SportData *)([cellInitDtatArray objectAtIndex:4])).downName;
+                //这里显示值
+                [imageViewCell6 setImageWithURL:[NSURL URLWithString:((SportData *)([cellInitDtatArray objectAtIndex:5])).imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
+                labelNameCell6.text = ((SportData *)([cellInitDtatArray objectAtIndex:5])).downName;
                 break;
                 
             default:
@@ -793,26 +858,67 @@ int xx;
 
 
 
-//请求我的球队数据
+//请求球队管理数据
 -(void) getMyTeamData
 {
-    NSString *tmpUserId = @"1000000000";
-    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-    [manager GET:WEB_SERVICE_GETMYTEAM(tmpUserId) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:WEB_SERVICE_GETMYSPORTTEAM([UserData getUserData].loginAccount) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          if (operation.response.statusCode == 200)
          {
-             NSDictionary *dic = operation.responseObject;
-             NSLog(@"111");
+             arrayAllData = [[NSMutableArray alloc] init];
+             NSArray *arrayData = operation.responseObject;
+             
+             //循环取数据
+                 for (int i = 0; i < arrayData.count; i++) {
+                     
+                     NSDictionary *tmpDic = [[NSDictionary alloc] init];
+                     tmpDic = [arrayData objectAtIndex:i];
+                     
+                     MyTeamData *myTeamData = [[MyTeamData alloc] init];
+                     myTeamData.numId = [tmpDic objectForKey:@"id"];
+                     myTeamData.teamname = [tmpDic objectForKey:@"teamname"];
+                     myTeamData.teamno = [tmpDic objectForKey:@"teamno"];
+                     myTeamData.oftencity = [tmpDic objectForKey:@"oftencity"];
+                     myTeamData.oftendistinct = [tmpDic objectForKey:@"oftendistinct"];
+                     myTeamData.oftensoccerpernum = [tmpDic objectForKey:@"oftensoccerpernum"];
+                     myTeamData.joinconfig = [tmpDic objectForKey:@"joinconfig"];
+                     myTeamData.sumary = [tmpDic objectForKey:@"sumary"];
+                     myTeamData.establishdate = [tmpDic objectForKey:@"establishdate"];
+                     myTeamData.teamleadernm = [tmpDic objectForKey:@"teamleadernm"];
+                     myTeamData.teamleaderusrrnm = [tmpDic objectForKey:@"teamleaderusrrnm"];
+                     myTeamData.teamleaderqqid = [tmpDic objectForKey:@"teamleaderqqid"];
+                     myTeamData.teamlogo = [tmpDic objectForKey:@"teamlogo"];
+                     myTeamData.actcount = [tmpDic objectForKey:@"actcount"];
+                     myTeamData.teamscore = [tmpDic objectForKey:@"teamscore"];
+                     myTeamData.stat = [tmpDic objectForKey:@"stat"];
+                     myTeamData.flag = [tmpDic objectForKey:@"flag"];
+                     myTeamData.createdate = [tmpDic objectForKey:@"createdate"];
+                     myTeamData.updatedate = [tmpDic objectForKey:@"updatedate"];
+                     myTeamData.teambalance = [tmpDic objectForKey:@"teambalance"];
+                     myTeamData.teamrule = [tmpDic objectForKey:@"teamrule"];
+                     
+                     [arrayAllData addObject:myTeamData];
+                 }
+                 
+                 
+                 //判断
+                 if (arrayAllData.count > 0) {
+                     //有值时调用
+                     [self sportManageValue];
+                 }else
+                 {
+                     //无值时调用
+                     [self sportManage];
+                 }
              
          }else
          {
-             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"出现异常" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:NO_MORE_DATA delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
              [alert show];
          }
          
@@ -826,8 +932,46 @@ int xx;
          [alert show];
      }
      ];
-    
 }
+
+//请求球队内部活动
+-(void) getInnerActivityData
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    NSLog(@"请求地址:%@",WEB_SERVICE_SPORTINNERACTIVITY([UserData getUserData].loginAccount));
+    [manager GET:WEB_SERVICE_SPORTINNERACTIVITY([UserData getUserData].loginAccount) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        if (operation.response.statusCode == 200)
+        {
+            arrayInnerData = [[NSMutableArray alloc] init];
+            NSArray *arrayData = operation.responseObject;
+            
+            //循环取数据
+            for (int i = 0; i < arrayData.count; i++) {
+                //
+                NSDictionary *tmpDic = [[NSDictionary alloc] init];
+                tmpDic = [arrayData objectAtIndex:i];
+                MyTeamInnerSportData *myTeamInnerSportData = [[MyTeamInnerSportData alloc] init];
+                myTeamInnerSportData.numId = [tmpDic objectForKey:@"id"];
+                
+            }
+            
+        }else
+        {
+            
+        }
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error)
+        {
+            
+        }];
+}
+
+
 
 
 //按钮执行方法
