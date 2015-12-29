@@ -334,6 +334,24 @@ int xxBase;
     NSLog(@"移动量:%f",scrollView.contentOffset.x);
 }
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.x < 320) {
+        [buttonBaseInfo setSelected:YES];
+        [buttonPhoto setSelected:NO];
+        viewH2.frame = CGRectMake(0, 108, SCREEN_WIDTH/2, 2);
+        //设置显示哪个view
+        //[scrollViewAll setContentOffset:CGPointMake(0, 0) animated:YES];
+    }else
+    {
+        [buttonBaseInfo setSelected:NO];
+        [buttonPhoto setSelected:YES];
+        viewH2.frame = CGRectMake(SCREEN_WIDTH/2, 108, SCREEN_WIDTH/2, 2);
+        //设置显示哪个view
+        //[scrollViewAll setContentOffset:CGPointMake(SCREEN_WIDTH, 0) animated:YES];
+    }
+    
+}
 //按钮执行方法
 -(IBAction)clickBtn:(id)sender
 {
@@ -343,6 +361,7 @@ int xxBase;
     switch (tmpBtn.tag) {
         case 10:
             NSLog(@"点击了返回按钮");
+            [self.navigationController popViewControllerAnimated:YES];
             break;
         case 11:
             NSLog(@"点击了基本信息");
