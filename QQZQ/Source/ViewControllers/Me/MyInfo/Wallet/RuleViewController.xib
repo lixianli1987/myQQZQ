@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RuleViewController">
+            <connections>
+                <outlet property="buttonBack" destination="5Qb-t1-l5x" id="t6H-5l-twO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-GK-PP0" userLabel="View-bg">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提现规则说明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXO-5C-oPZ">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="SgB-4v-oVb"/>
+                                <constraint firstAttribute="width" constant="102" id="Tsb-wa-Zut"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="SgB-4v-oVb"/>
+                                    <exclude reference="Tsb-wa-Zut"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="SgB-4v-oVb"/>
+                                    <include reference="Tsb-wa-Zut"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qb-t1-l5x">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="31" id="GGG-bQ-9GA"/>
+                                <constraint firstAttribute="width" constant="38" id="K6n-bU-ZMw"/>
+                            </constraints>
+                            <state key="normal" image="back">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="GGG-bQ-9GA"/>
+                                    <exclude reference="K6n-bU-ZMw"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="GGG-bQ-9GA"/>
+                                    <include reference="K6n-bU-ZMw"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="OAD-Yd-2uv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="bbG-Ch-1XX"/>
+                        <constraint firstItem="rXO-5C-oPZ" firstAttribute="top" secondItem="7gB-GK-PP0" secondAttribute="top" constant="25" id="e3o-U1-qaJ"/>
+                        <constraint firstItem="5Qb-t1-l5x" firstAttribute="top" secondItem="7gB-GK-PP0" secondAttribute="top" constant="20" id="jTT-ta-vHr"/>
+                        <constraint firstItem="5Qb-t1-l5x" firstAttribute="leading" secondItem="7gB-GK-PP0" secondAttribute="leading" constant="17" id="szo-LN-hJz"/>
+                        <constraint firstItem="rXO-5C-oPZ" firstAttribute="centerX" secondItem="7gB-GK-PP0" secondAttribute="centerX" id="uI8-bd-BIL"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="rXO-5C-oPZ"/>
+                            <exclude reference="5Qb-t1-l5x"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="bbG-Ch-1XX"/>
+                            <exclude reference="jTT-ta-vHr"/>
+                            <exclude reference="szo-LN-hJz"/>
+                            <exclude reference="e3o-U1-qaJ"/>
+                            <exclude reference="uI8-bd-BIL"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="rXO-5C-oPZ"/>
+                            <include reference="5Qb-t1-l5x"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="bbG-Ch-1XX"/>
+                            <include reference="jTT-ta-vHr"/>
+                            <include reference="szo-LN-hJz"/>
+                            <include reference="e3o-U1-qaJ"/>
+                            <include reference="uI8-bd-BIL"/>
+                        </mask>
+                    </variation>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1、支持银行卡和支付宝提现。 2、提现前需绑定支付宝账户或银行卡账户。 3、提现申请成功后，我们将尽快审核，预计2-3个工作日到账。 " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-mR-niI">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="0.98431372549999996" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oW3-mR-niI" secondAttribute="trailing" constant="10" id="1Qe-L8-9D0"/>
+                <constraint firstAttribute="trailing" secondItem="7gB-GK-PP0" secondAttribute="trailing" id="BI0-iy-6gh"/>
+                <constraint firstItem="oW3-mR-niI" firstAttribute="top" secondItem="7gB-GK-PP0" secondAttribute="bottom" constant="20" id="NWK-EO-ybd"/>
+                <constraint firstItem="7gB-GK-PP0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R3p-9H-et4"/>
+                <constraint firstItem="oW3-mR-niI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Vjt-Kd-dST"/>
+                <constraint firstAttribute="bottom" secondItem="oW3-mR-niI" secondAttribute="bottom" id="xXC-p8-Bxn"/>
+                <constraint firstItem="7gB-GK-PP0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zTa-Ow-l7g"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="7gB-GK-PP0"/>
+                    <exclude reference="oW3-mR-niI"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="BI0-iy-6gh"/>
+                    <exclude reference="R3p-9H-et4"/>
+                    <exclude reference="zTa-Ow-l7g"/>
+                    <exclude reference="1Qe-L8-9D0"/>
+                    <exclude reference="NWK-EO-ybd"/>
+                    <exclude reference="Vjt-Kd-dST"/>
+                    <exclude reference="xXC-p8-Bxn"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="7gB-GK-PP0"/>
+                    <include reference="oW3-mR-niI"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="BI0-iy-6gh"/>
+                    <include reference="R3p-9H-et4"/>
+                    <include reference="zTa-Ow-l7g"/>
+                    <include reference="1Qe-L8-9D0"/>
+                    <include reference="NWK-EO-ybd"/>
+                    <include reference="Vjt-Kd-dST"/>
+                    <include reference="xXC-p8-Bxn"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="12" height="20"/>
+    </resources>
+</document>
