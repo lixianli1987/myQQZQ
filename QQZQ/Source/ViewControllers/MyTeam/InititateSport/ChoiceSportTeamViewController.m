@@ -10,12 +10,20 @@
 #import "FindViewTableViewCell.h"
 #import "FindViewData.h"
 #import "InitiateViewController.h"
-
+#import "AFNetworking.h"
+#import "WebServiceHost.h"
+#import "UserData.h"
+#import "MyTeamData.h"
+#import "MyUtils.h"
+#import "Common.h"
 
 
 @interface ChoiceSportTeamViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
-     NSMutableArray *arrayData;
+    //请求到的所有的数据
+     NSMutableArray *arrayAllData;
+    //装进加载数组的数据
+    NSMutableArray *arrayData;
 }
 
 @end
@@ -29,25 +37,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
-    //初始化数组
-    arrayData = [[NSMutableArray alloc] init];
-    //测试
-    FindViewData *findViewData = [[FindViewData alloc] init];
-    findViewData.imageUrl = @"http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%9B%BE%E7%89%87%20png%E6%A0%BC%E5%BC%8F&step_word=&pn=0&spn=0&di=67714301380&pi=&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1089436324%2C3910665089&os=1479526918%2C3247161766&adpicid=0&ln=1000&fr=ala&fmq=1441898090399_R&ic=undefined&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=0&objurl=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fwh%3D600%2C800%2Fsign%3D8899159308f79052ef4a4f383cc3fbf2%2F78310a55b319ebc41f7810198326cffc1e171629.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fcmdmmdmb8_z%26e3Bip4s&gsm=0";
-    findViewData.teamName = @"成都皇马队";
-    findViewData.teamLeader = @"李师兄";
-    findViewData.teamNumber = @"15人";
-    findViewData.establishTime = @"2015年09月10日";
-    
-    [arrayData addObject:findViewData];
-    
-    
+    //请求数据
+    [self getMyTeamData];
     
     //tableView设置代理
     tableViewSports.delegate = self;
     tableViewSports.dataSource = self;
-    
 }
 
 
@@ -101,7 +96,105 @@
 }
 
 
+//请求球队管理数据
+-(void) getMyTeamData
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [manager GET:WEB_SERVICE_GETMYSPORTTEAM([UserData getUserData].loginAccount) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         if (operation.response.statusCode == 200)
+         {
+             arrayAllData = [[NSMutableArray alloc] init];
+             NSArray *arrayDataRespose = operation.responseObject;
+             
+             //循环取数据
+             for (int i = 0; i < arrayDataRespose.count; i++) {
+                 
+                 NSDictionary *tmpDic = [[NSDictionary alloc] init];
+                 tmpDic = [arrayDataRespose objectAtIndex:i];
+                 
+                 MyTeamData *teamDta = [[MyTeamData alloc] init];
+                 
+                 NSString *tmpId = [tmpDic objectForKey:@"id"];
+                 teamDta.numId = [NSString stringWithFormat:@"%@",tmpId];
+                 teamDta.teamname = [tmpDic objectForKey:@"teamname"];
+                 teamDta.teamno = [tmpDic objectForKey:@"teamno"];
+                 teamDta.oftencity = [tmpDic objectForKey:@"oftencity"];
+                 teamDta.oftendistinct = [tmpDic objectForKey:@"oftendistinct"];
+                 teamDta.oftensoccerpernum = [tmpDic objectForKey:@"oftensoccerpernum"];
+                 teamDta.joinconfig = [tmpDic objectForKey:@"joinconfig"];
+                 teamDta.sumary = [tmpDic objectForKey:@"sumary"];
+                 //获取创建时间
+                 NSString *time = [tmpDic objectForKey:@"establishdate"];
+                 long long timeLong = [time longLongValue];
+                 NSString *changeTime = [Common changeTimeIntervalToSysTime:timeLong];
+                 teamDta.establishdate = changeTime;
+                 
+                 teamDta.teamleadernm = [tmpDic objectForKey:@"teamleadernm"];
+                 teamDta.teamleaderusrrnm = [tmpDic objectForKey:@"teamleaderusrrnm"];
+                 teamDta.teamleaderqqid = [tmpDic objectForKey:@"teamleaderqqid"];
+                 teamDta.teamlogo = [tmpDic objectForKey:@"teamlogo"];
+                 teamDta.actcount = [tmpDic objectForKey:@"actcount"];
+                 teamDta.teamscore = [tmpDic objectForKey:@"teamscore"];
+                 teamDta.stat = [tmpDic objectForKey:@"stat"];
+                 teamDta.flag = [tmpDic objectForKey:@"flag"];
+                 teamDta.createdate = [tmpDic objectForKey:@"createdate"];
+                 teamDta.updatedate = [tmpDic objectForKey:@"updatedate"];
+                 teamDta.teambalance = [tmpDic objectForKey:@"teambalance"];
+                 teamDta.teamrule = [tmpDic objectForKey:@"teamrule"];
+                 
+                 [arrayAllData addObject:teamDta];
+             }
+             
+             //转换数据
+             [self turnToData];
+             
+             //请求完数据后，在加载tableview
+             [tableViewSports reloadData];
+             
+             
+         }else
+         {
+             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:NO_MORE_DATA delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+             [alert show];
+         }
+         
+     }failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSDictionary *dic = operation.responseObject;
+         NSString *showMessage = [dic objectForKey:@"customMessage"];
+         
+         //显示失败信息
+         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:showMessage delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+         [alert show];
+     }
+     ];
+    
+}
 
+
+//转换数据到需要的数组
+-(void) turnToData
+{
+    //初始化cell数组
+    arrayData = [[NSMutableArray alloc] init];
+    
+    for (int i = 0 ; i < arrayAllData.count; i++) {
+        
+        FindViewData *findViewData = [[FindViewData alloc] init];
+        findViewData.imageUrl = ((MyTeamData *)arrayAllData[i]).teamlogo;
+        findViewData.teamName = ((MyTeamData *)arrayAllData[i]).teamname;
+        findViewData.teamLeader = ((MyTeamData *)arrayAllData[i]).teamleaderusrrnm;
+        findViewData.teamNumber = ((MyTeamData *)arrayAllData[i]).numId;
+        findViewData.establishTime = ((MyTeamData *)arrayAllData[i]).establishdate;
+        [arrayData addObject:findViewData];
+    }
+    
+}
 
 //按钮执行方法
 -(IBAction)clickBtn:(id)sender

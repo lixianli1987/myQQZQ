@@ -20,6 +20,8 @@
 @property (weak,nonatomic) IBOutlet UITextField *textFieldSportName;
 //球队所在地
 @property (weak,nonatomic) IBOutlet UIView *viewSportLocation;
+//球队所在地label
+@property (weak,nonatomic) IBOutlet UILabel *labelSportLocation;
 //5人制按钮
 @property (weak,nonatomic) IBOutlet UIButton *button5People;
 //7人制按钮
@@ -42,6 +44,10 @@
 //view 任何人 需审核
 @property (weak,nonatomic) IBOutlet UIView *viewEveryOne;
 @property (weak,nonatomic) IBOutlet UIView *viewNeed;
+//点击头像选择图片view
+@property (weak,nonatomic) IBOutlet UIView *viewHeadImg;
+//球队头像
+@property (strong,nonatomic) IBOutlet UIImageView *imageViewHeadImg;
 
 
 //响应按钮方法

@@ -9,11 +9,24 @@
 #import "FindViewController.h"
 #import "FindViewTableViewCell.h"
 #import "FindViewData.h"
+#import "AFNetworking.h"
+#import "WebServiceHost.h"
+#import "UserData.h"
+#import "MyTeamData.h"
+#import "MyUtils.h"
+#import "Common.h"
 
 
 @interface FindViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 {
+    //服务器请求回来的数据
+    NSMutableArray *arrayAllMyData;
+    
+    //需要加载的数据
     NSMutableArray *arrayData;
+    
+    //查询球队数组
+    NSMutableArray *arraySearchData;
 }
 
 @end
@@ -24,54 +37,129 @@
 @synthesize tableView;
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self getTeamData];
     
-    //初始化数组
-    arrayData = [[NSMutableArray alloc] init];
-    //测试
-    FindViewData *findViewData = [[FindViewData alloc] init];
-    findViewData.imageUrl = @"www.baidu.com";
-    findViewData.teamName = @"成都皇马队";
-    findViewData.teamLeader = @"李师兄";
-    findViewData.teamNumber = @"15人";
-    findViewData.establishTime = @"2015年09月10日";
-    [arrayData addObject:findViewData];
-    
-    FindViewData *findViewData2 = [[FindViewData alloc] init];
-    findViewData2.imageUrl = @"www.baidu.com";
-    [arrayData addObject:findViewData2];
-    
-    FindViewData *findViewData3 = [[FindViewData alloc] init];
-    findViewData3.imageUrl = @"www.baidu.com";
-    [arrayData addObject:findViewData3];
-    FindViewData *findViewData4 = [[FindViewData alloc] init];
-    findViewData4.imageUrl = @"www.baidu.com";
-    [arrayData addObject:findViewData4];
-    FindViewData *findViewData5 = [[FindViewData alloc] init];
-    findViewData5.imageUrl = @"www.baidu.com";
-    [arrayData addObject:findViewData5];
-    FindViewData *findViewData6 = [[FindViewData alloc] init];
-    findViewData6.imageUrl = @"www.baidu.com";
-    [arrayData addObject:findViewData6];
-    FindViewData *findViewData7 = [[FindViewData alloc] init];
-    findViewData7.imageUrl = @"www.baidu.com";
-    [arrayData addObject:findViewData7];
-    
-    
-    
-    
-    //searchBar设置代理
-    searchBarMy.delegate = self;
-    
-    //tableView设置代理
+    //设置代理
     tableView.delegate = self;
     tableView.dataSource = self;
-    
+    searchBarMy.delegate = self;
     
 }
+
+//请求球队管理数据
+-(void) getTeamData
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    NSLog(@"地址:%@",WEB_SERVICE_GETMYSPORTTEAM([UserData getUserData].loginAccount));
+    [manager GET:WEB_SERVICE_GETMYSPORTTEAM([UserData getUserData].loginAccount) parameters:nil success:^(AFHTTPRequestOperation *operation,id responseObject)
+     {
+         NSLog(@"eee");
+         if (operation.response.statusCode == 200)
+         {
+             NSLog(@"hhh");
+             arrayAllMyData = [[NSMutableArray alloc] init];
+             
+            NSArray *arrayDataTmp = operation.responseObject;
+             for (int i = 0; i < arrayDataTmp.count; i++)
+             {
+                 NSDictionary *tmpDic = [[NSDictionary alloc] init];
+                 tmpDic = [arrayDataTmp objectAtIndex:i];
+                 MyTeamData *teamDta = [[MyTeamData alloc] init];
+                 
+                 NSString *tmpId = [tmpDic objectForKey:@"id"];
+                 teamDta.numId = [NSString stringWithFormat:@"%@",tmpId];
+                 teamDta.teamname = [tmpDic objectForKey:@"teamname"];
+                 teamDta.teamno = [tmpDic objectForKey:@"teamno"];
+                 teamDta.oftencity = [tmpDic objectForKey:@"oftencity"];
+                 teamDta.oftendistinct = [tmpDic objectForKey:@"oftendistinct"];
+                 teamDta.oftensoccerpernum = [tmpDic objectForKey:@"oftensoccerpernum"];
+                 teamDta.joinconfig = [tmpDic objectForKey:@"joinconfig"];
+                 teamDta.sumary = [tmpDic objectForKey:@"sumary"];
+                 //获取创建时间
+                 NSString *time = [tmpDic objectForKey:@"establishdate"];
+                 long long timeLong = [time longLongValue];
+                 NSString *changeTime = [Common changeTimeIntervalToSysTime:timeLong];
+                 teamDta.establishdate = changeTime;
+                 
+                 teamDta.teamleadernm = [tmpDic objectForKey:@"teamleadernm"];
+                 teamDta.teamleaderusrrnm = [tmpDic objectForKey:@"teamleaderusrrnm"];
+                 teamDta.teamleaderqqid = [tmpDic objectForKey:@"teamleaderqqid"];
+                 teamDta.teamlogo = [tmpDic objectForKey:@"teamlogo"];
+                 teamDta.actcount = [tmpDic objectForKey:@"actcount"];
+                 teamDta.teamscore = [tmpDic objectForKey:@"teamscore"];
+                 teamDta.stat = [tmpDic objectForKey:@"stat"];
+                 teamDta.flag = [tmpDic objectForKey:@"flag"];
+                 teamDta.createdate = [tmpDic objectForKey:@"createdate"];
+                 teamDta.updatedate = [tmpDic objectForKey:@"updatedate"];
+                 teamDta.teambalance = [tmpDic objectForKey:@"teambalance"];
+                 teamDta.teamrule = [tmpDic objectForKey:@"teamrule"];
+                 
+                 [arrayAllMyData addObject:teamDta];
+             }
+             
+             [self turnToData];
+             //重新加载数据
+             [tableView reloadData];
+             
+         }
+         
+     }failure:^(AFHTTPRequestOperation *operation,NSError *error)
+     {
+         NSLog(@"dddddd");
+         
+     }];
+}
+
+
+//转换数据到需要的数组
+-(void) turnToData
+{
+    //初始化cell数组
+    arrayData = [[NSMutableArray alloc] init];
+    
+    for (int i = 0 ; i < arrayAllMyData.count; i++) {
+        
+        FindViewData *findViewData = [[FindViewData alloc] init];
+        findViewData.imageUrl = ((MyTeamData *)arrayAllMyData[i]).teamlogo;
+        findViewData.teamName = ((MyTeamData *)arrayAllMyData[i]).teamname;
+        findViewData.teamLeader = ((MyTeamData *)arrayAllMyData[i]).teamleaderusrrnm;
+        findViewData.teamNumber = ((MyTeamData *)arrayAllMyData[i]).numId;
+        findViewData.establishTime = ((MyTeamData *)arrayAllMyData[i]).establishdate;
+        [arrayData addObject:findViewData];
+    }
+    
+}
+
+//转换数据到需要的数组
+-(void) turnToData2
+{
+    //初始化cell数组
+    arrayData = [[NSMutableArray alloc] init];
+    
+    for (int i = 0 ; i < arraySearchData.count; i++) {
+        
+        FindViewData *findViewData = [[FindViewData alloc] init];
+        findViewData.imageUrl = ((MyTeamData *)arrayAllMyData[i]).teamlogo;
+        findViewData.teamName = ((MyTeamData *)arrayAllMyData[i]).teamname;
+        findViewData.teamLeader = ((MyTeamData *)arrayAllMyData[i]).teamleaderusrrnm;
+        findViewData.teamNumber = ((MyTeamData *)arrayAllMyData[i]).numId;
+        findViewData.establishTime = ((MyTeamData *)arrayAllMyData[i]).establishdate;
+        [arrayData addObject:findViewData];
+    }
+    
+}
+
+
 
 //装值的个数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -122,7 +210,81 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     NSLog(@"cc:%@",searchBarMy.text);
+    [self searchTeamData:searchBarMy.text];
     [self textFieldShouldReturn:searchBarMy];
+}
+
+//查询结果
+//请求球队管理数据
+-(void) searchTeamData:(NSString *)searchContent
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    NSLog(@"查询球队地址:%@",WEB_SERVICE_FIND_SPORTTEAM([UserData getUserData].loginAccount,searchContent));
+    [manager GET:WEB_SERVICE_FIND_SPORTTEAM([UserData getUserData].loginAccount,searchContent) parameters:nil success:^(AFHTTPRequestOperation *operation,id responseObject)
+     {
+         NSLog(@"eee");
+         if (operation.response.statusCode == 200)
+         {
+             NSLog(@"hhh");
+             arraySearchData = [[NSMutableArray alloc] init];
+             
+             NSArray *arrayDataTmp = operation.responseObject;
+             for (int i = 0; i < arrayDataTmp.count; i++)
+             {
+                 NSDictionary *tmpDic = [[NSDictionary alloc] init];
+                 tmpDic = [arrayDataTmp objectAtIndex:i];
+                 MyTeamData *teamDta = [[MyTeamData alloc] init];
+                 
+                 NSString *tmpId = [tmpDic objectForKey:@"id"];
+                 teamDta.numId = [NSString stringWithFormat:@"%@",tmpId];
+                 teamDta.teamname = [tmpDic objectForKey:@"teamname"];
+                 teamDta.teamno = [tmpDic objectForKey:@"teamno"];
+                 teamDta.oftencity = [tmpDic objectForKey:@"oftencity"];
+                 teamDta.oftendistinct = [tmpDic objectForKey:@"oftendistinct"];
+                 teamDta.oftensoccerpernum = [tmpDic objectForKey:@"oftensoccerpernum"];
+                 teamDta.joinconfig = [tmpDic objectForKey:@"joinconfig"];
+                 teamDta.sumary = [tmpDic objectForKey:@"sumary"];
+                 //获取创建时间
+                 NSString *time = [tmpDic objectForKey:@"establishdate"];
+                 long long timeLong = [time longLongValue];
+                 NSString *changeTime = [Common changeTimeIntervalToSysTime:timeLong];
+                 teamDta.establishdate = changeTime;
+                 
+                 teamDta.teamleadernm = [tmpDic objectForKey:@"teamleadernm"];
+                 teamDta.teamleaderusrrnm = [tmpDic objectForKey:@"teamleaderusrrnm"];
+                 teamDta.teamleaderqqid = [tmpDic objectForKey:@"teamleaderqqid"];
+                 teamDta.teamlogo = [tmpDic objectForKey:@"teamlogo"];
+                 teamDta.actcount = [tmpDic objectForKey:@"actcount"];
+                 teamDta.teamscore = [tmpDic objectForKey:@"teamscore"];
+                 teamDta.stat = [tmpDic objectForKey:@"stat"];
+                 teamDta.flag = [tmpDic objectForKey:@"flag"];
+                 teamDta.createdate = [tmpDic objectForKey:@"createdate"];
+                 teamDta.updatedate = [tmpDic objectForKey:@"updatedate"];
+                 teamDta.teambalance = [tmpDic objectForKey:@"teambalance"];
+                 teamDta.teamrule = [tmpDic objectForKey:@"teamrule"];
+                 
+                 [arraySearchData addObject:teamDta];
+             }
+             
+             [self turnToData2];
+             //重新加载数据
+             [tableView reloadData];
+             
+         }else
+         {
+             NSLog(@"测试");
+         }
+         
+     }failure:^(AFHTTPRequestOperation *operation,NSError *error)
+     {
+         NSLog(@"dddddd");
+         
+     }];
 }
 
 

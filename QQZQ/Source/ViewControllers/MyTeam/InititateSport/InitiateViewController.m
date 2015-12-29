@@ -9,11 +9,13 @@
 #import "InitiateViewController.h"
 #import "MyUtils.h"
 #import "ChoiceSportTeamViewController.h"
+#import "Common.h"
 
 
 @interface InitiateViewController ()<UIScrollViewDelegate,UITextFieldDelegate,UITextViewDelegate>
 {
     //选择 球队内部活动和公开活动
+    //0:球队内部活动  1:公开活动
     int flagChoice;
     UIButton *buttonInner;
     UIButton *buttonPublic;
@@ -967,6 +969,7 @@
         //显示时间
         NSDate *date = [datePicker date];
         NSLog(@"时间是:%@",date);
+        
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
         NSString *dateString = [dateFormatter stringFromDate:date];
@@ -1103,6 +1106,7 @@
         case 11:
             NSLog(@"点击了发布按钮");
             //提交数据
+            [self message];
             
             break;
             
@@ -1112,7 +1116,69 @@
     
 }
 
+-(void) message
+{
+    //活动日期
+    NSString *dateActivity = @"";
 
+    
+    //判断活动标题不为空且字数小于15
+    if ([textFieldName.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请输入活动标题" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }else if (textFieldName.text.length > 15)
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"活动标题的字数最大为15" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    //活动地点，不能为空
+    if ([textFieldLocation.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请输入活动地点" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    //活动日期
+    if ([datePicker date] == nil) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请选择活动日期" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }else
+    {
+        dateActivity = [Common getChangeTime:[datePicker date]];
+    }
+    
+    //球队内部外部活动
+    //flagChoice
+    
+    //场地类型
+    //flagChoice2
+    
+    //活动费用
+    //flagChoice4
+    NSString *fee = @"";
+    if (flagChoice4 == 0) {
+        fee = textFieldAllPrice.text;
+    }else if (flagChoice4 == 1)
+    {
+        fee = textFieldUnitPrice.text;
+    }else if (flagChoice4 == 2)
+    {
+        fee = textFieldAccount.text;
+    }
+    
+    //人数下限
+    
+    
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"接口还在调试中，谢谢参与！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alert show];
+    return;
+}
 
 
 - (void)didReceiveMemoryWarning {

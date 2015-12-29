@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateViewController">
@@ -14,6 +15,8 @@
                 <outlet property="buttonBack" destination="322-Mj-ZGb" id="BzQ-ZN-6DJ"/>
                 <outlet property="buttonNeedVerify" destination="3oO-HF-ChO" id="ndz-d4-aVH"/>
                 <outlet property="buttonSure" destination="Gu6-II-CTM" id="Q90-pC-cWu"/>
+                <outlet property="imageViewHeadImg" destination="Yex-ks-cgP" id="QDz-cK-Ue6"/>
+                <outlet property="labelSportLocation" destination="cTW-Th-lHg" id="Hxp-sd-lxU"/>
                 <outlet property="textFieldSportName" destination="OSh-Ut-dAs" id="eao-Z4-Pg9"/>
                 <outlet property="textViewProfile" destination="gZt-Q1-KzL" id="B2X-wY-PJS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,6 +25,7 @@
                 <outlet property="view7" destination="XTJ-km-bFQ" id="0dF-Uh-PMR"/>
                 <outlet property="view9" destination="B88-0l-xkI" id="oMF-u1-oUn"/>
                 <outlet property="viewEveryOne" destination="3LZ-52-kR5" id="75c-A4-nC5"/>
+                <outlet property="viewHeadImg" destination="dLl-aB-iW1" id="S9f-dU-VCa"/>
                 <outlet property="viewNeed" destination="oGg-J5-ht6" id="idO-xl-kti"/>
                 <outlet property="viewSportHeadImg" destination="566-VL-AS9" id="LdD-xn-SkZ"/>
                 <outlet property="viewSportLocation" destination="R6h-Dr-ENn" id="Yos-QS-aN7"/>
@@ -163,6 +167,23 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="566-VL-AS9" userLabel="View-球队头像">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
+                        <view tag="18" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLl-aB-iW1" userLabel="View-HeadImg">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="98" id="PLc-Lf-KXS"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="PLc-Lf-KXS"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="PLc-Lf-KXS"/>
+                                </mask>
+                            </variation>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="球队头像" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eq-4S-uFR">
                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                             <constraints>
@@ -417,6 +438,7 @@
                     <constraints>
                         <constraint firstItem="Dyv-iK-5xw" firstAttribute="top" secondItem="Yex-ks-cgP" secondAttribute="bottom" constant="9" id="9fn-ip-B8E"/>
                         <constraint firstItem="SiL-Wc-Py5" firstAttribute="leading" secondItem="WZG-Y8-yt1" secondAttribute="trailing" constant="6" id="Ara-xM-J3A"/>
+                        <constraint firstAttribute="trailing" secondItem="dLl-aB-iW1" secondAttribute="trailing" id="BQd-U1-Yp7"/>
                         <constraint firstAttribute="trailing" secondItem="OSh-Ut-dAs" secondAttribute="trailing" constant="17" id="DEw-qT-tKB"/>
                         <constraint firstItem="tq1-cP-X1i" firstAttribute="leading" secondItem="0co-k0-I31" secondAttribute="trailing" constant="6" id="FTV-CE-epL"/>
                         <constraint firstItem="CSC-I6-hzq" firstAttribute="top" secondItem="OSh-Ut-dAs" secondAttribute="bottom" constant="8" id="IYk-m0-aoe"/>
@@ -424,6 +446,7 @@
                         <constraint firstItem="0eq-4S-uFR" firstAttribute="leading" secondItem="566-VL-AS9" secondAttribute="leading" constant="40" id="Kxx-eA-NgM"/>
                         <constraint firstAttribute="height" constant="197" id="L5R-Px-avU"/>
                         <constraint firstItem="R6h-Dr-ENn" firstAttribute="leading" secondItem="SiL-Wc-Py5" secondAttribute="trailing" constant="3" id="LIg-lT-ydE"/>
+                        <constraint firstItem="dLl-aB-iW1" firstAttribute="top" secondItem="566-VL-AS9" secondAttribute="top" id="Peq-Xi-Gko"/>
                         <constraint firstItem="cEG-Lb-tee" firstAttribute="leading" secondItem="Yex-ks-cgP" secondAttribute="trailing" constant="38" id="QSX-iG-r3T">
                             <variation key="widthClass=compact" constant="13"/>
                         </constraint>
@@ -445,9 +468,11 @@
                         <constraint firstItem="cEG-Lb-tee" firstAttribute="top" secondItem="566-VL-AS9" secondAttribute="top" constant="37" id="s09-b3-2mI"/>
                         <constraint firstItem="0co-k0-I31" firstAttribute="top" secondItem="Dyv-iK-5xw" secondAttribute="bottom" constant="16" id="wJm-Y3-yPI"/>
                         <constraint firstItem="CSC-I6-hzq" firstAttribute="leading" secondItem="566-VL-AS9" secondAttribute="leading" constant="20" id="x3H-XH-alc"/>
+                        <constraint firstItem="dLl-aB-iW1" firstAttribute="leading" secondItem="566-VL-AS9" secondAttribute="leading" id="y3I-Ua-9zp"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
+                            <exclude reference="dLl-aB-iW1"/>
                             <exclude reference="0eq-4S-uFR"/>
                             <exclude reference="cEG-Lb-tee"/>
                             <exclude reference="Dyv-iK-5xw"/>
@@ -480,6 +505,9 @@
                             <exclude reference="QSX-iG-r3T"/>
                             <exclude reference="QUw-2z-yBs"/>
                             <exclude reference="s09-b3-2mI"/>
+                            <exclude reference="BQd-U1-Yp7"/>
+                            <exclude reference="Peq-Xi-Gko"/>
+                            <exclude reference="y3I-Ua-9zp"/>
                             <exclude reference="IYk-m0-aoe"/>
                             <exclude reference="cgX-68-hbD"/>
                             <exclude reference="x3H-XH-alc"/>
@@ -493,6 +521,7 @@
                     </variation>
                     <variation key="widthClass=compact">
                         <mask key="subviews">
+                            <include reference="dLl-aB-iW1"/>
                             <include reference="0eq-4S-uFR"/>
                             <include reference="cEG-Lb-tee"/>
                             <include reference="Dyv-iK-5xw"/>
@@ -525,6 +554,9 @@
                             <include reference="QSX-iG-r3T"/>
                             <include reference="QUw-2z-yBs"/>
                             <include reference="s09-b3-2mI"/>
+                            <include reference="BQd-U1-Yp7"/>
+                            <include reference="Peq-Xi-Gko"/>
+                            <include reference="y3I-Ua-9zp"/>
                             <include reference="IYk-m0-aoe"/>
                             <include reference="cgX-68-hbD"/>
                             <include reference="x3H-XH-alc"/>

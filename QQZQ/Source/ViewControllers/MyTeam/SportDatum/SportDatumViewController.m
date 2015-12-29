@@ -14,7 +14,7 @@
 #import "TeamMemberViewController.h"
 #import "MemberFeeManageViewController.h"
 #import "TeamAttendanceViewController.h"
-
+#import "ModifySportDatumViewController.h"
 
 @interface SportDatumViewController ()<UIScrollViewDelegate>
 
@@ -200,6 +200,22 @@
     labelE.font = [UIFont systemFontOfSize:12];
     [view2 addSubview:labelE];
     
+    //球队资料修改
+    UIView *viewF = [[UIView alloc] initWithFrame:CGRectMake(15+60+18, 96, 60, 60)];
+    //这种方式添加图片不变形
+    viewF.layer.contents = (id)[UIImage imageNamed:@"attendanceManagement"].CGImage;
+    [view2 addSubview:viewF];
+    viewF.tag = 17;
+    //在这个view上加手势,点击进入球队相册
+    UITapGestureRecognizer *sinTapGestureF = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sinTapView:)];
+    [viewF addGestureRecognizer:sinTapGestureF];
+    
+    UILabel *labelF = [[UILabel alloc] initWithFrame:CGRectMake(75+12, 156, 80, 21)];
+    labelF.text = @"球队资料修改";
+    labelF.font = [UIFont systemFontOfSize:12];
+    [view2 addSubview:labelF];
+    
+    
     /*********************************view3模块*********************************************/
     //从355开始
     UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(0, 355, SCREEN_WIDTH, 40)];
@@ -340,7 +356,10 @@
         case 16:
             NSLog(@"点击了球队相册");
             break;
-            
+        case 17:
+            NSLog(@"点击了球队资料修改");
+            [self viewToModifySportDatum];
+            break;
         default:
             break;
     }
@@ -391,6 +410,12 @@
     
 }
 
+//跳往球队资料修改页面
+-(void) viewToModifySportDatum
+{
+    ModifySportDatumViewController *modifySportDatumViewController= [[ModifySportDatumViewController alloc] init];
+    [self.navigationController pushViewController:modifySportDatumViewController animated:YES];
+}
 
 
 //按钮执行方法

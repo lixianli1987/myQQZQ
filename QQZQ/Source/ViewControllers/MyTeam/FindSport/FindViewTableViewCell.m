@@ -34,10 +34,10 @@
 -(void) initCellData:(FindViewData *)bean
 {
     [imageView setImageWithURL:[NSURL URLWithString:bean.imageUrl] placeholderImage:[UIImage imageNamed:@"example1"]];
-    //labelSportName.text = bean.teamName;
-    //labelSportLeader.text = bean.teamLeader;
-    //labelSportNumber.text = bean.teamNumber;
-    //labelSportEstablishTime.text = bean.establishTime;
+    labelSportName.text = bean.teamName;
+    labelSportLeader.text = bean.teamLeader;
+    labelSportNumber.text = bean.teamNumber;
+    labelSportEstablishTime.text = bean.establishTime;
 }
 
 
