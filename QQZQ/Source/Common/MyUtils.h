@@ -19,4 +19,22 @@
 //屏幕宽度比例
 #define SCREEN_RATIO        [[UIScreen mainScreen] bounds].size.width/320
 
+//提示：没有更多数据
+#define NO_MORE_DATA        @"没有更多数据"
+
+//提示：没有更多数据
+#define NET_ERROR        @"网络异常"
+
+//图片前缀
+#define IMG_PRIFIX  @"http://121.43.229.24/"  
+
+//返回状态码
+#define code_200     @"200"
+#define code_201     @"201"
+#define code_400     @"400"
+#define code_401     @"401"
+#define code_403     @"403"
+#define code_500     @"500"
+
+
 @end
