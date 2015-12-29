@@ -9,7 +9,7 @@
 #import "ChoiceCityViewController.h"
 #import "CityTableViewCell.h"
 #import "RegisterViewController.h"
-
+#import "CreateViewController.h"
 
 
 @interface ChoiceCityViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -22,6 +22,7 @@
 @synthesize tableViewCity;
 @synthesize arrayCity;
 @synthesize receivedProvince;
+@synthesize receiveRegisterFlag;
 
 
 - (void)viewDidLoad {
@@ -665,12 +666,22 @@
     NSString *tmpCity = arrayCity[indexPath.row];
     NSString *proAndCity = [[receivedProvince stringByAppendingString:@" "] stringByAppendingString:tmpCity];
     
-    //如果是直辖市，则直接返回注册页面
+    if (receiveRegisterFlag == 1) {
+    //返回注册页面
     RegisterViewController *registerViewController = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count - 3];
     //传参数
     registerViewController.labelCity.text = proAndCity;
     registerViewController.labelCity.textColor = [UIColor blackColor];
     [self.navigationController popToViewController:registerViewController animated:YES];
+    }else
+    {
+        //返回创建球队页面
+        CreateViewController *createViewController = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count - 3];
+        //传参数
+        createViewController.labelSportLocation.text = proAndCity;
+        createViewController.labelSportLocation.textColor = [UIColor blackColor];
+        [self.navigationController popToViewController:createViewController animated:YES];
+    }
     
 }
 

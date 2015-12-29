@@ -20,6 +20,9 @@
 //省份数组
 @property (strong,nonatomic) NSMutableArray *arrayProvince;
 
+//接收到的标志位 1:注册 2:创建球队
+@property int receiveFlag;
+
 //响应按钮方法
 -(IBAction)clickBtn:(id)sender;
 

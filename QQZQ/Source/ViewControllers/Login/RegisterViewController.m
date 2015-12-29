@@ -209,6 +209,7 @@
 {
     //跳往选择省会页面
     ChoiceProvinceViewController *choiceProvinceViewController = [[ChoiceProvinceViewController alloc] init];
+    choiceProvinceViewController.receiveFlag = 1;
     [self.navigationController pushViewController:choiceProvinceViewController animated:YES];
 }
 

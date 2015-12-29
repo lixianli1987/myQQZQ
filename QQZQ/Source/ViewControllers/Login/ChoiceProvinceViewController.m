@@ -10,6 +10,7 @@
 #import "ChoiceProvinceTableViewCell.h"
 #import "RegisterViewController.h"
 #import "ChoiceCityViewController.h"
+#import "CreateViewController.h"
 
 
 @interface ChoiceProvinceViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -21,7 +22,7 @@
 @synthesize buttonBack;
 @synthesize tableviewProvince;
 @synthesize arrayProvince;
-
+@synthesize receiveFlag;
 
 
 - (void)viewDidLoad {
@@ -33,7 +34,6 @@
     //设置代理
     tableviewProvince.delegate = self;
     tableviewProvince.dataSource = self;
-    
     
 }
 
@@ -118,18 +118,30 @@
         indexPath.row == 26
         )
     {
+        if (receiveFlag == 1)
+        {
         //如果是直辖市，则直接返回注册页面
         RegisterViewController *registerViewController = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count - 2];
         //传参数
         registerViewController.labelCity.text = arrayProvince[indexPath.row];
         registerViewController.labelCity.textColor = [UIColor blackColor];
         [self.navigationController popToViewController:registerViewController animated:YES];
+        }else
+        {
+            //创建球队页面
+            CreateViewController *createViewController = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count - 2];
+            //传参数
+            createViewController.labelSportLocation.text = arrayProvince[indexPath.row];
+            createViewController.labelSportLocation.textColor = [UIColor blackColor];
+            [self.navigationController popToViewController:createViewController animated:YES];
+        }
     }else
     {
         //跳往选择城市页面
         ChoiceCityViewController *choiceCityViewController = [[ChoiceCityViewController alloc] init];
         choiceCityViewController.receivedProvince = arrayProvince[indexPath.row];
         NSLog(@"发送的省份:%@",choiceCityViewController.receivedProvince);
+        choiceCityViewController.receiveRegisterFlag = receiveFlag;
         [self.navigationController pushViewController:choiceCityViewController animated:YES];
     }
     
