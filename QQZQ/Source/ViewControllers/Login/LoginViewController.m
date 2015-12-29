@@ -11,6 +11,9 @@
 #import "WebServiceHost.h"
 #import "RegisterViewController.h"
 #import "MainViewController.h"
+#import "UserData.h"
+#import "MyUtils.h"
+
 
 
 @interface LoginViewController ()<UITextFieldDelegate>
@@ -34,6 +37,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    
     //登陆边框
     viewLogin.layer.cornerRadius = 6;
     viewLogin.layer.masksToBounds = YES;
@@ -48,7 +52,7 @@
     
     //代理
     textFieldTelephone.delegate = self;
-    textFieldPassword.delegate  = self; 
+    textFieldPassword.delegate  = self;
     
 }
 
@@ -78,6 +82,9 @@
         NSLog(@"token值:%@",token);
         if (operation.response.statusCode == 200) {
             NSLog(@"登陆成功");
+            
+            //设置值
+            [[UserData getUserData] initUserData:textFieldTelephone.text password:textFieldPassword.text];
             
             //登陆成功加载main
             MainViewController *mainViewController = [[MainViewController alloc] init];
@@ -117,7 +124,7 @@
              NSString *showMessage = [dic2 objectForKey:@"customMessage"];
              
              //默认错误
-             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:showMessage delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:NET_ERROR delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
              [alert show];
          }
      }
